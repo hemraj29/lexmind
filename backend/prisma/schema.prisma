@@ -1,0 +1,256 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["postgresqlExtensions"]
+}
+
+datasource db {
+  provider   = "postgresql"
+  url        = env("DATABASE_URL")
+  extensions = [vector]
+}
+
+// ─── ACTS (Parent table for all legislation) ──────────────
+
+model Act {
+  id          String   @id @default(cuid())
+  code        ActType  @unique          // BNS, BNSS, BSA
+  fullName    String   @map("full_name") // "Bhartiya Nyaya Sanhita"
+  year        Int                        // 2023
+  description String?
+  replacedAct String?  @map("replaced_act") // "Indian Penal Code"
+
+  sections    StatuteSection[]
+  chapters    Chapter[]
+
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@map("acts")
+}
+
+// ─── CHAPTERS (Group sections under chapters) ────────────
+
+model Chapter {
+  id          String   @id @default(cuid())
+  actId       String   @map("act_id")
+  act         Act      @relation(fields: [actId], references: [id], onDelete: Cascade)
+  number      Int
+  title       String
+  description String?
+
+  sections    StatuteSection[]
+
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@unique([actId, number])
+  @@map("chapters")
+}
+
+// ─── STATUTE SECTIONS ────────────────────────────────────
+
+model StatuteSection {
+  id            String      @id @default(cuid())
+  actId         String      @map("act_id")
+  act           Act         @relation(fields: [actId], references: [id], onDelete: Cascade)
+  actType       ActType     @map("act_type")
+  chapterId     String?     @map("chapter_id")
+  chapter       Chapter?    @relation(fields: [chapterId], references: [id])
+  sectionNumber String      @map("section_number")
+  title         String
+  description   String
+  offenceType   OffenceType @map("offence_type")
+  bailable      Boolean
+  compoundable  Boolean     @default(false)
+  punishment    String
+  minPunishment String?     @map("min_punishment")
+  maxPunishment String?     @map("max_punishment")
+  ingredients   String[]    // Elements prosecution must prove
+  keywords      String[]
+  exceptions    String[]    @default([])
+  explanation   String?     // Legal explanation/illustrations
+
+  // Relations
+  ipcMappingsAsBNS IPCMapping[]  @relation("BNSSection")
+  precedentLinks   PrecedentSection[]
+
+  // pgvector embedding (1536 dim for text-embedding-3-small)
+  embedding     Unsupported("vector(1536)")?
+
+  createdAt     DateTime @default(now()) @map("created_at")
+  updatedAt     DateTime @updatedAt @map("updated_at")
+
+  @@unique([actType, sectionNumber])
+  @@index([actType])
+  @@index([bailable])
+  @@index([sectionNumber])
+  @@index([actId])
+  @@map("statute_sections")
+}
+
+// ─── IPC TO BNS MAPPING ────────────────────────────────
+
+model IPCMapping {
+  id              String   @id @default(cuid())
+  ipcSection      String   @unique @map("ipc_section")
+  ipcTitle        String   @map("ipc_title")
+  bnsSection      String   @map("bns_section")
+  bnsTitle        String   @map("bns_title")
+  bnsSectionId    String?  @map("bns_section_id")
+  bnsSectionRef   StatuteSection? @relation("BNSSection", fields: [bnsSectionId], references: [id])
+  changeType      MappingChangeType @default(RENAMED) @map("change_type")
+  notes           String?
+
+  createdAt       DateTime @default(now()) @map("created_at")
+  updatedAt       DateTime @updatedAt @map("updated_at")
+
+  @@index([bnsSection])
+  @@map("ipc_mappings")
+}
+
+// ─── CASE PRECEDENTS ───────────────────────────────────
+
+model Precedent {
+  id               String   @id @default(cuid())
+  caseTitle        String   @map("case_title")
+  citation         String   @unique
+  court            String
+  bench            String?              // Judge names
+  year             Int
+  ratio            String               // Key legal principle
+  summary          String
+  headnotes        String?              // Brief headnotes
+  tags             String[]
+  bailRelevant     Boolean  @default(false) @map("bail_relevant")
+
+  // Relations
+  sectionLinks     PrecedentSection[]
+
+  // pgvector embedding
+  embedding        Unsupported("vector(1536)")?
+
+  createdAt        DateTime @default(now()) @map("created_at")
+  updatedAt        DateTime @updatedAt @map("updated_at")
+
+  @@index([court])
+  @@index([year])
+  @@index([bailRelevant])
+  @@map("precedents")
+}
+
+// ─── JOIN TABLE: Precedent <-> StatuteSection ──────────
+
+model PrecedentSection {
+  id          String         @id @default(cuid())
+  precedentId String         @map("precedent_id")
+  precedent   Precedent      @relation(fields: [precedentId], references: [id], onDelete: Cascade)
+  sectionId   String         @map("section_id")
+  section     StatuteSection @relation(fields: [sectionId], references: [id], onDelete: Cascade)
+  relevance   String?        // Why this precedent is relevant to this section
+
+  @@unique([precedentId, sectionId])
+  @@map("precedent_sections")
+}
+
+// ─── PIPELINE RUNS ─────────────────────────────────────
+
+model PipelineRun {
+  id              String      @id @default(cuid())
+  status          RunStatus   @default(PENDING)
+  fileName        String      @map("file_name")
+  mimeType        String      @map("mime_type")
+  uploadPath      String      @map("upload_path")
+
+  // Extracted FIR data (JSONB)
+  extractedFIR    Json?       @map("extracted_fir")
+
+  // Legal research memo (JSONB)
+  legalMemo       Json?       @map("legal_memo")
+
+  // Draft output
+  draftMarkdown   String?     @map("draft_markdown")
+  docxPath        String?     @map("docx_path")
+
+  // Pipeline tracking
+  steps           Json[]      @default([])
+  currentStep     String?     @map("current_step")
+  totalDurationMs Int?        @map("total_duration_ms")
+  error           String?
+
+  // Relation to generated documents
+  documents       GeneratedDocument[]
+
+  createdAt       DateTime    @default(now()) @map("created_at")
+  updatedAt       DateTime    @updatedAt @map("updated_at")
+
+  @@index([status])
+  @@index([createdAt(sort: Desc)])
+  @@map("pipeline_runs")
+}
+
+// ─── GENERATED DOCUMENTS ───────────────────────────────
+
+model GeneratedDocument {
+  id            String       @id @default(cuid())
+  pipelineRunId String       @map("pipeline_run_id")
+  pipelineRun   PipelineRun  @relation(fields: [pipelineRunId], references: [id], onDelete: Cascade)
+  docType       DocumentType @map("doc_type")
+  filePath      String       @map("file_path")
+  fileSize      Int          @map("file_size")
+  mimeType      String       @map("mime_type")
+
+  createdAt     DateTime     @default(now()) @map("created_at")
+
+  @@map("generated_documents")
+}
+
+// ─── ENUMS ─────────────────────────────────────────────
+
+enum ActType {
+  BNS
+  BNSS
+  BSA
+}
+
+enum OffenceType {
+  COGNIZABLE     @map("cognizable")
+  NON_COGNIZABLE @map("non-cognizable")
+}
+
+enum RunStatus {
+  PENDING   @map("pending")
+  RUNNING   @map("running")
+  COMPLETED @map("completed")
+  FAILED    @map("failed")
+}
+
+enum MappingChangeType {
+  RENAMED     @map("renamed")     // Same offence, new number
+  MODIFIED    @map("modified")    // Changed elements/punishment
+  MERGED      @map("merged")      // Multiple IPC sections merged into one BNS
+  SPLIT       @map("split")       // One IPC section split into multiple BNS
+  NEW         @map("new")         // No IPC equivalent
+  REPEALED    @map("repealed")    // IPC section removed, no BNS equivalent
+}
+
+enum DocumentType {
+  BAIL_APPLICATION    @map("bail_application")
+  LEGAL_MEMO          @map("legal_memo")
+  FIR_EXTRACT         @map("fir_extract")
+}
+
+
+
+
+
+
+
+
+
+
+
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/hemraj29/lexmind.git
+git push -u origin main

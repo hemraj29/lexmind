@@ -1,0 +1,289 @@
+# MASTER PROMPT FOR AI ARCHITECT
+
+## Project: Buildio-Legal (MVP + Scalable Foundation)
+
+---
+
+## 🎯 ROLE & RESPONSIBILITY
+
+You are a **Senior AI Architect & Backend System Designer**.
+
+Your task is to:
+
+> **Design and implement a production-grade MVP for Buildio-Legal — an AI system that converts FIR data into structured, court-ready bail applications using high-accuracy legal reasoning.**
+
+You must:
+
+* Think like a **real-world system architect**
+* Prioritize **accuracy, reliability, and usability**
+* Avoid over-engineering in MVP
+* Build a system that can **scale later without redesign**
+
+---
+
+# 🧠 PROBLEM CONTEXT
+
+We are solving a real legal workflow problem:
+
+* Lawyers spend hours reading FIRs and drafting bail applications
+* FIRs are unstructured and hard to process
+* Legal mapping (IPC → BNS) is confusing in the 2026 legal system
+* Existing tools do not provide reasoning or drafting
+
+---
+
+# 🎯 CORE OBJECTIVE
+
+Build a system that:
+
+> **Takes FIR input → extracts structured facts → maps legal sections → generates a professional bail application draft**
+
+The output must be:
+
+* Structured
+* Legally coherent
+* Usable by a practicing lawyer
+
+---
+
+# ⚖️ SYSTEM EXPECTATIONS
+
+The system must behave like:
+
+* A **legal reader** (understands FIR)
+* A **legal assistant** (identifies relevant law)
+* A **legal drafter** (generates structured document)
+
+---
+
+# 🚀 MVP SCOPE (STRICT BOUNDARY)
+
+You are building ONLY:
+
+1. FIR Parsing
+2. Legal Section Mapping
+3. Basic Retrieval (lightweight)
+4. Draft Generation
+5. Document Output
+
+DO NOT include:
+
+* Complex agent frameworks (LangGraph initially)
+* Large-scale distributed systems
+* Full court integrations
+
+---
+
+# 🧱 CORE FUNCTIONAL COMPONENTS
+
+---
+
+## 1️⃣ FIR UNDERSTANDING MODULE
+
+### Objective:
+
+Convert raw FIR text into structured JSON.
+
+### Requirements:
+
+* Extract:
+
+  * Accused Name
+  * Victim Name
+  * FIR Number
+  * Police Station
+  * Sections (IPC/BNS)
+  * Brief Facts (clean summary)
+
+### Constraints:
+
+* Output must be **strict JSON**
+* No hallucinated fields
+* Must handle noisy/unstructured input
+
+---
+
+## 2️⃣ LEGAL MAPPING ENGINE
+
+### Objective:
+
+Map extracted sections to relevant legal provisions.
+
+### Requirements:
+
+* Detect:
+
+  * IPC sections (e.g., 420, 302)
+* Map to:
+
+  * Corresponding BNS sections
+
+### Must Include:
+
+* Alias handling (e.g., “cheating” → 420)
+* Structured law representation:
+
+  * Section number
+  * Title
+  * Ingredients of offense
+  * Punishment
+
+---
+
+## 3️⃣ RETRIEVAL LOGIC (LIGHTWEIGHT HYBRID)
+
+### Objective:
+
+Fetch relevant legal context.
+
+### Requirements:
+
+* Keyword matching for sections (exact match)
+* Optional semantic retrieval (FAISS or equivalent)
+* Return:
+
+  * Relevant legal sections
+  * 1–3 supporting case summaries (if available)
+
+### Constraints:
+
+* Accuracy > quantity
+* Do NOT return irrelevant results
+
+---
+
+## 4️⃣ LEGAL DRAFT GENERATION ENGINE
+
+### Objective:
+
+Generate a **court-ready bail application**
+
+### Requirements:
+
+The draft must include:
+
+1. Introduction
+2. Brief Facts
+3. Grounds for Bail (5–7 points)
+4. Legal Arguments
+5. Prayer
+
+### Constraints:
+
+* Use ONLY retrieved facts and laws
+
+* Do NOT invent:
+
+  * Sections
+  * Case laws
+  * Facts
+
+* Maintain:
+
+  * Formal legal tone
+  * Logical flow
+  * Consistency
+
+---
+
+## 5️⃣ DOCUMENT GENERATION
+
+### Objective:
+
+Convert generated text into a `.docx` file.
+
+### Requirements:
+
+* Clean formatting
+* Paragraph separation
+* Ready for legal submission
+
+---
+
+# 🛡️ CRITICAL SYSTEM CONSTRAINTS
+
+---
+
+## 1. NO HALLUCINATION POLICY
+
+* Every legal section must exist in database
+* No invented case references
+* No fabricated facts
+
+---
+
+## 2. GROUNDING REQUIREMENT
+
+* Draft must be grounded in:
+
+  * FIR data
+  * Retrieved legal sections
+
+---
+
+## 3. CONSISTENCY CHECK
+
+* FIR facts must match draft
+* Sections in draft must match retrieved sections
+
+---
+
+# ⚙️ DESIGN PRINCIPLES
+
+---
+
+## 1. BUILD THIN, WORKING PIPELINE FIRST
+
+* End-to-end functionality > perfect architecture
+* Avoid premature optimization
+
+---
+
+## 2. MODULAR DESIGN
+
+Each component should be:
+
+* Independent
+* Replaceable
+* Scalable later
+
+---
+
+## 3. DATA-FIRST APPROACH
+
+* System accuracy depends on structured legal data
+* Ensure clean and well-defined schema
+
+---
+
+## 4. OUTPUT QUALITY > INFRASTRUCTURE
+
+* Focus on:
+
+  * Draft correctness
+  * Legal usability
+
+---
+
+# 🧪 SUCCESS CRITERIA
+
+The system is successful if:
+
+* A lawyer can input FIR
+* Receive a structured bail draft
+* Say:
+
+  > “This saves my time and is usable”
+
+---
+
+# ⚠️ RISKS YOU MUST HANDLE
+
+* Noisy FIR input
+* Missing sections
+* Incorrect mapping
+* Weak argument generation
+
+You must design fallback mechanisms.
+
+

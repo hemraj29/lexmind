@@ -1,0 +1,27 @@
+node_modules/
+dist/
+.env
+*.env.local
+
+# Backend
+backend/uploads/
+backend/output/
+backend/node_modules/
+backend/dist/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Prisma
+backend/prisma/migrations/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
