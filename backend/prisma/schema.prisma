@@ -238,19 +238,3 @@ enum DocumentType {
   LEGAL_MEMO          @map("legal_memo")
   FIR_EXTRACT         @map("fir_extract")
 }
-
-
-
-
-
-
-
-
-
-
-
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/hemraj29/lexmind.git
-git push -u origin main
