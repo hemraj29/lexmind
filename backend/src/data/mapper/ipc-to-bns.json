@@ -1,1 +1,3698 @@
-[]
+[
+  {
+    "ipcSection": "1",
+    "ipcTitle": "Title and extent of operation of the Code",
+    "bnsSection": "1",
+    "bnsTitle": "Short title, commencement and application",
+    "changeType": "merged",
+    "notes": "Section 1 of BNS consolidates IPC Sections 1 to 5"
+  },
+  {
+    "ipcSection": "2",
+    "ipcTitle": "Punishment of offences committed within India",
+    "bnsSection": "1",
+    "bnsTitle": "Short title, commencement and application",
+    "changeType": "merged",
+    "notes": "Section 1 of BNS consolidates IPC Sections 1 to 5"
+  },
+  {
+    "ipcSection": "3",
+    "ipcTitle": "Punishment of offences committed beyond, but which by law may be tried within, India",
+    "bnsSection": "1",
+    "bnsTitle": "Short title, commencement and application",
+    "changeType": "merged",
+    "notes": "Section 1 of BNS consolidates IPC Sections 1 to 5"
+  },
+  {
+    "ipcSection": "4",
+    "ipcTitle": "Extension of Code to extra-territorial offences",
+    "bnsSection": "1",
+    "bnsTitle": "Short title, commencement and application",
+    "changeType": "merged",
+    "notes": "Section 1 of BNS consolidates IPC Sections 1 to 5"
+  },
+  {
+    "ipcSection": "5",
+    "ipcTitle": "",
+    "bnsSection": "1",
+    "bnsTitle": "Short title, commencement and application",
+    "changeType": "merged",
+    "notes": "Section 1 of BNS consolidates IPC Sections 1 to 5"
+  },
+  {
+    "ipcSection": "6",
+    "ipcTitle": "Definitions in the Code to be understood subject to exceptions",
+    "bnsSection": "41",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS Section 41 mirrors IPC Section 6"
+  },
+  {
+    "ipcSection": "7",
+    "ipcTitle": "Sense of expression once explained",
+    "bnsSection": "42",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS Section 42 mirrors IPC Section 7"
+  },
+  {
+    "ipcSection": "8",
+    "ipcTitle": "Gender",
+    "bnsSection": "2(10)",
+    "bnsTitle": "gender",
+    "changeType": "modified",
+    "notes": "Definition expanded to include the term ‘transgender’."
+  },
+  {
+    "ipcSection": "9",
+    "ipcTitle": "Number",
+    "bnsSection": "24",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "Mapped from IPC section 9 to BNS section 24."
+  },
+  {
+    "ipcSection": "10",
+    "ipcTitle": "Man",
+    "bnsSection": "21",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "Mapped from IPC section 10 to BNS section 21."
+  },
+  {
+    "ipcSection": "11",
+    "ipcTitle": "Person",
+    "bnsSection": "28",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "Mapped from IPC section 11 to BNS section 28."
+  },
+  {
+    "ipcSection": "12",
+    "ipcTitle": "Public",
+    "bnsSection": "29",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "Mapped from IPC section 12 to BNS section 29."
+  },
+  {
+    "ipcSection": "19",
+    "ipcTitle": "Judge",
+    "bnsSection": "2(16)",
+    "bnsTitle": "Judge",
+    "changeType": "modified",
+    "notes": "Modification of IPC Section 19 “Judge” incorporated into BNS."
+  },
+  {
+    "ipcSection": "20",
+    "ipcTitle": "Court of Justice",
+    "bnsSection": "2(5)",
+    "bnsTitle": "Court",
+    "changeType": "renamed",
+    "notes": "Term ‘Court of Justice’ replaced by ‘Court’ throughout the Sanhita."
+  },
+  {
+    "ipcSection": "21",
+    "ipcTitle": "Public Servant",
+    "bnsSection": "30",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "Mapped from IPC section 21 to BNS section 30."
+  },
+  {
+    "ipcSection": "22",
+    "ipcTitle": "Movable property",
+    "bnsSection": "23",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "Mapped from IPC section 22 to BNS section 23."
+  },
+  {
+    "ipcSection": "23",
+    "ipcTitle": "Wrongful gain",
+    "bnsSection": "38",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS definition aligns with IPC Section 23"
+  },
+  {
+    "ipcSection": "26",
+    "ipcTitle": "Reason to believe",
+    "bnsSection": "31",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS definition aligns with IPC Section 26"
+  },
+  {
+    "ipcSection": "27",
+    "ipcTitle": "Property in possession of wife, clerk or servant",
+    "bnsSection": "43",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS Section 43 mirrors IPC Section 27"
+  },
+  {
+    "ipcSection": "30",
+    "ipcTitle": "Valuable Security",
+    "bnsSection": "33",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS definition aligns with IPC Section 30"
+  },
+  {
+    "ipcSection": "31",
+    "ipcTitle": "A Will",
+    "bnsSection": "36",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS definition aligns with IPC Section 31"
+  },
+  {
+    "ipcSection": "32",
+    "ipcTitle": "Words referring to acts include illegal commissions",
+    "bnsSection": "44",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS Section 44 mirrors IPC Section 32"
+  },
+  {
+    "ipcSection": "33",
+    "ipcTitle": "",
+    "bnsSection": "2(1)",
+    "bnsTitle": "act",
+    "changeType": "split",
+    "notes": "Definition of “act” previously in IPC Section 33 split into BNS Section 2(1)."
+  },
+  {
+    "ipcSection": "34",
+    "ipcTitle": "Acts done by several persons in furtherance of common intention",
+    "bnsSection": "45",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS Section 45 mirrors IPC Section 34"
+  },
+  {
+    "ipcSection": "35",
+    "ipcTitle": "When such an act is criminal by reason of its being done with a criminal knowledge or intention",
+    "bnsSection": "46",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS Section 46 mirrors IPC Section 35"
+  },
+  {
+    "ipcSection": "36",
+    "ipcTitle": "Effect caused partly by act and partly by omission",
+    "bnsSection": "47",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS Section 47 mirrors IPC Section 36"
+  },
+  {
+    "ipcSection": "37",
+    "ipcTitle": "Co-operation by doing one of several acts constituting an offence",
+    "bnsSection": "3(8)",
+    "bnsTitle": "Co-operation by doing one of several acts constituting an offence",
+    "changeType": "merged",
+    "notes": "Consolidated into BNS Section 3(8) as part of General Explanations"
+  },
+  {
+    "ipcSection": "38",
+    "ipcTitle": "Persons concerned in criminal act may be guilty of different offences",
+    "bnsSection": "3(9)",
+    "bnsTitle": "Persons concerned in criminal act may be guilty of different offences",
+    "changeType": "merged",
+    "notes": "Consolidated into BNS Section 3(9) as part of General Explanations"
+  },
+  {
+    "ipcSection": "39",
+    "ipcTitle": "Voluntarily",
+    "bnsSection": "35",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS definition aligns with IPC Section 39"
+  },
+  {
+    "ipcSection": "40",
+    "ipcTitle": "Offence",
+    "bnsSection": "26",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "Mapped from IPC section 40 to BNS section 26."
+  },
+  {
+    "ipcSection": "41",
+    "ipcTitle": "Special Law",
+    "bnsSection": "32",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS definition aligns with IPC Section 41"
+  },
+  {
+    "ipcSection": "42",
+    "ipcTitle": "Local Law",
+    "bnsSection": "20",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "Mapped from IPC section 42 to BNS section 20."
+  },
+  {
+    "ipcSection": "43",
+    "ipcTitle": "Illegal",
+    "bnsSection": "17",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "Mapped from IPC section 43 to BNS section 17."
+  },
+  {
+    "ipcSection": "44",
+    "ipcTitle": "Injury",
+    "bnsSection": "16",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "Mapped from IPC section 44 to BNS section 16."
+  },
+  {
+    "ipcSection": "45",
+    "ipcTitle": "Life",
+    "bnsSection": "19",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "Mapped from IPC section 45 to BNS section 19."
+  },
+  {
+    "ipcSection": "49",
+    "ipcTitle": "Year",
+    "bnsSection": "22",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "Mapped from IPC section 49 to BNS section 22."
+  },
+  {
+    "ipcSection": "51",
+    "ipcTitle": "Oath",
+    "bnsSection": "25",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "Mapped from IPC section 51 to BNS section 25."
+  },
+  {
+    "ipcSection": "53",
+    "ipcTitle": "",
+    "bnsSection": "4",
+    "bnsTitle": "Punishments",
+    "changeType": "modified",
+    "notes": "Added community service sub‑section (f) to the list of punishments."
+  },
+  {
+    "ipcSection": "63",
+    "ipcTitle": "Amount of fine",
+    "bnsSection": "8",
+    "bnsTitle": "Amount of fine, liability in default of payment of fine, etc",
+    "changeType": "merged",
+    "notes": "Consolidated IPC Sections 63‑70 into BNS Section 8."
+  },
+  {
+    "ipcSection": "64",
+    "ipcTitle": "Sentence of imprisonment for non-payment of fine",
+    "bnsSection": "8",
+    "bnsTitle": "Amount of fine, liability in default of payment of fine, etc",
+    "changeType": "merged",
+    "notes": "Consolidated IPC Sections 63‑70 into BNS Section 8."
+  },
+  {
+    "ipcSection": "65",
+    "ipcTitle": "Limit to imprisonment for non-payment of fine, when imprisonment and fine awardable",
+    "bnsSection": "8",
+    "bnsTitle": "Amount of fine, liability in default of payment of fine, etc",
+    "changeType": "merged",
+    "notes": "Consolidated IPC Sections 63‑70 into BNS Section 8."
+  },
+  {
+    "ipcSection": "66",
+    "ipcTitle": "Description of imprisonment for non-payment of fine",
+    "bnsSection": "8",
+    "bnsTitle": "Amount of fine, liability in default of payment of fine, etc",
+    "changeType": "merged",
+    "notes": "Consolidated IPC Sections 63‑70 into BNS Section 8."
+  },
+  {
+    "ipcSection": "67",
+    "ipcTitle": "Imprisonment for non-payment of fine, when offence punishable with fine only",
+    "bnsSection": "8",
+    "bnsTitle": "Amount of fine, liability in default of payment of fine, etc",
+    "changeType": "merged",
+    "notes": "Consolidated IPC Sections 63‑70 into BNS Section 8."
+  },
+  {
+    "ipcSection": "68",
+    "ipcTitle": "Imprisonment to terminate on payment of fine",
+    "bnsSection": "8",
+    "bnsTitle": "Amount of fine, liability in default of payment of fine, etc",
+    "changeType": "merged",
+    "notes": "Consolidated IPC Sections 63‑70 into BNS Section 8."
+  },
+  {
+    "ipcSection": "69",
+    "ipcTitle": "Termination of imprisonment on payment of proportional part of fine",
+    "bnsSection": "8",
+    "bnsTitle": "Amount of fine, liability in default of payment of fine, etc",
+    "changeType": "merged",
+    "notes": "Consolidated IPC Sections 63‑70 into BNS Section 8."
+  },
+  {
+    "ipcSection": "70",
+    "ipcTitle": "Fine leviable within six years, or during imprisonment. Death not to discharge property from liability",
+    "bnsSection": "8",
+    "bnsTitle": "Amount of fine, liability in default of payment of fine, etc",
+    "changeType": "merged",
+    "notes": "Consolidated IPC Sections 63‑70 into BNS Section 8."
+  },
+  {
+    "ipcSection": "71",
+    "ipcTitle": "Punishment of person guilty of one of several offences, where judgment is doubtful as to which",
+    "bnsSection": "9",
+    "bnsTitle": "Limit of punishment of offence made up of several offences",
+    "changeType": "modified",
+    "notes": "Drafting revised to sub‑section format"
+  },
+  {
+    "ipcSection": "72",
+    "ipcTitle": "Punishment of person guilty of one of several offences, where judgment is doubtful as to which",
+    "bnsSection": "10",
+    "bnsTitle": "Punishment of person guilty of one of several offences, judgment stating that it is doubtful of which",
+    "changeType": "modified",
+    "notes": ""
+  },
+  {
+    "ipcSection": "73",
+    "ipcTitle": "Enhanced punishment for certain offences after previous conviction",
+    "bnsSection": "13",
+    "bnsTitle": "Enhanced punishment for certain offences after previous conviction",
+    "changeType": "modified",
+    "notes": "Enhanced punishment provision incorporated"
+  },
+  {
+    "ipcSection": "74",
+    "ipcTitle": "Limit of solitary confinement",
+    "bnsSection": "12",
+    "bnsTitle": "Limit of solitary confinement",
+    "changeType": "modified",
+    "notes": "Solitary confinement limit incorporated"
+  },
+  {
+    "ipcSection": "75",
+    "ipcTitle": "Punishment for certain offences after previous conviction",
+    "bnsSection": "13",
+    "bnsTitle": "Enhanced punishment for certain offences after previous conviction",
+    "changeType": "modified",
+    "notes": ""
+  },
+  {
+    "ipcSection": "76",
+    "ipcTitle": "Act done by a person bound, or by mistake of fact believing himself bound by law",
+    "bnsSection": "14",
+    "bnsTitle": "Act done by a person bound, or by mistake of fact believing himself bound by law",
+    "changeType": "modified",
+    "notes": "General exception provision streamlined"
+  },
+  {
+    "ipcSection": "77",
+    "ipcTitle": "Act of judge when acting judicially",
+    "bnsSection": "15",
+    "bnsTitle": "Act of judge when acting judicially",
+    "changeType": "modified",
+    "notes": "General exception provision streamlined"
+  },
+  {
+    "ipcSection": "78",
+    "ipcTitle": "Act done pursuant to judgment or order of court",
+    "bnsSection": "16",
+    "bnsTitle": "Act done pursuant to judgment or order of court",
+    "changeType": "modified",
+    "notes": "General exception provision streamlined"
+  },
+  {
+    "ipcSection": "79",
+    "ipcTitle": "Act done by a person justified, or by mistake of fact believing himself justified by law",
+    "bnsSection": "17",
+    "bnsTitle": "Act done by a person justified, or by mistake of fact believing himself justified by law",
+    "changeType": "modified",
+    "notes": "General exception provision streamlined"
+  },
+  {
+    "ipcSection": "80",
+    "ipcTitle": "",
+    "bnsSection": "74",
+    "bnsTitle": "ACT OF A CHILD UNDER SEVEN YEARS OF AGE",
+    "changeType": "renamed",
+    "notes": "BNS section 74 mirrors IPC Section 80"
+  },
+  {
+    "ipcSection": "81",
+    "ipcTitle": "",
+    "bnsSection": "75",
+    "bnsTitle": "ACT OF A CHILD ABOVE SEVEN AND UNDER TWELVE YEARS OF AGE OF IMMATURE UNDERSTANDING",
+    "changeType": "renamed",
+    "notes": "BNS section 75 mirrors IPC Section 81"
+  },
+  {
+    "ipcSection": "82",
+    "ipcTitle": "",
+    "bnsSection": "76",
+    "bnsTitle": "ACT OF A PERSON OF UNSOUND MIND",
+    "changeType": "renamed",
+    "notes": "BNS section 76 mirrors IPC Section 82"
+  },
+  {
+    "ipcSection": "83",
+    "ipcTitle": "",
+    "bnsSection": "77",
+    "bnsTitle": "ACT OF A PERSON INCAPABLE OF JUDGMENT BY REASON OF INTOXICATION CAUSED AGAINST HIS WILL",
+    "changeType": "renamed",
+    "notes": "BNS section 77 mirrors IPC Section 83"
+  },
+  {
+    "ipcSection": "84",
+    "ipcTitle": "",
+    "bnsSection": "78",
+    "bnsTitle": "OFFENCE REQUIRING A PARTICULAR INTENT OR KNOWLEDGE COMMITTED BY ONE WHO IS INTOXICATED",
+    "changeType": "renamed",
+    "notes": "BNS section 78 mirrors IPC Section 84"
+  },
+  {
+    "ipcSection": "86",
+    "ipcTitle": "",
+    "bnsSection": "78",
+    "bnsTitle": "OFFENCE REQUIRING A PARTICULAR INTENT OR KNOWLEDGE COMMITTED BY ONE WHO IS INTOXICATED",
+    "changeType": "renamed",
+    "notes": "BNS section 78 mirrors IPC Section 86"
+  },
+  {
+    "ipcSection": "87",
+    "ipcTitle": "",
+    "bnsSection": "79",
+    "bnsTitle": "ACT NOT INTENDED AND NOT KNOWN TO BE LIKELY TO CAUSE DEATH OR GRIEVOUS HURT, DONE BY CONSENT",
+    "changeType": "renamed",
+    "notes": "BNS section 79 mirrors IPC Section 87"
+  },
+  {
+    "ipcSection": "88",
+    "ipcTitle": "",
+    "bnsSection": "80",
+    "bnsTitle": "ACT NOT INTENDED TO CAUSE DEATH, DONE BY CONSENT IN GOOD FAITH FOR PERSON’S BENEFIT",
+    "changeType": "renamed",
+    "notes": "BNS section 80 mirrors IPC Section 88"
+  },
+  {
+    "ipcSection": "89",
+    "ipcTitle": "",
+    "bnsSection": "81",
+    "bnsTitle": "ACT DONE IN GOOD FAITH FOR BENEFIT OF CHILD OR PERSON OF UNSOUND MIND (INSANE PERSON), BY, OR BY CONSENT OF GUARDIAN",
+    "changeType": "renamed",
+    "notes": "BNS section 81 mirrors IPC Section 89"
+  },
+  {
+    "ipcSection": "90",
+    "ipcTitle": "",
+    "bnsSection": "82",
+    "bnsTitle": "CONSENT KNOWN TO BE GIVEN UNDER FEAR OR MISCONCEPTION",
+    "changeType": "renamed",
+    "notes": "BNS section 82 mirrors IPC Section 90"
+  },
+  {
+    "ipcSection": "91",
+    "ipcTitle": "",
+    "bnsSection": "83",
+    "bnsTitle": "NDEPENDENTLY OF HARM CAUSED",
+    "changeType": "",
+    "notes": "IPC Section 91 cited in BNS section 83"
+  },
+  {
+    "ipcSection": "92",
+    "ipcTitle": "",
+    "bnsSection": "84",
+    "bnsTitle": "ACT DONE IN GOOD FAITH FOR BENEFIT OF A PERSON WITHOUT CONSENT",
+    "changeType": "",
+    "notes": "IPC Section 92 cited in BNS section 84"
+  },
+  {
+    "ipcSection": "93",
+    "ipcTitle": "",
+    "bnsSection": "85",
+    "bnsTitle": "COMMUNICATION MADE IN GOOD FAITH",
+    "changeType": "",
+    "notes": "IPC Section 93 cited in BNS section 85"
+  },
+  {
+    "ipcSection": "94",
+    "ipcTitle": "",
+    "bnsSection": "86",
+    "bnsTitle": "ACT TO WHICH A PERSON IS COMPELLED BY THREATS",
+    "changeType": "",
+    "notes": "IPC Section 94 cited in BNS section 86"
+  },
+  {
+    "ipcSection": "95",
+    "ipcTitle": "",
+    "bnsSection": "87",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "96",
+    "ipcTitle": "",
+    "bnsSection": "88",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "97",
+    "ipcTitle": "",
+    "bnsSection": "89",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "98",
+    "ipcTitle": "",
+    "bnsSection": "90",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "99",
+    "ipcTitle": "",
+    "bnsSection": "91",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "100",
+    "ipcTitle": "",
+    "bnsSection": "38",
+    "bnsTitle": "WHEN RIGHT OF PRIVATE DEFENCE OF BODY EXTENDS TO CAUSING DEATH",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "101",
+    "ipcTitle": "",
+    "bnsSection": "42",
+    "bnsTitle": "WHEN SUCH RIGHT EXTENDS TO CAUSING ANY HARM OTHER THAN DEATH",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "102",
+    "ipcTitle": "",
+    "bnsSection": "41",
+    "bnsTitle": "WHEN RIGHT OF PRIVATE DEFENCE OF PROPERTY EXTENDS TO CAUSING DEATH",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "103",
+    "ipcTitle": "",
+    "bnsSection": "41",
+    "bnsTitle": "WHEN RIGHT OF PRIVATE DEFENCE OF PROPERTY EXTENDS TO CAUSING DEATH",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "104",
+    "ipcTitle": "",
+    "bnsSection": "42",
+    "bnsTitle": "WHEN SUCH RIGHT EXTENDS TO CAUSING ANY HARM OTHER THAN DEATH",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "105",
+    "ipcTitle": "",
+    "bnsSection": "43",
+    "bnsTitle": "COMMENCEMENT AND CONTINUANCE OF RIGHT OF PRIVATE DEFENCE OF PROPERTY",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "106",
+    "ipcTitle": "",
+    "bnsSection": "44",
+    "bnsTitle": "RIGHT OF PRIVATE DEFENCE AGAINST DEADLY ASSAULT WHEN THERE IS RISK OF HARM TO INNOCENT PERSON",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "107",
+    "ipcTitle": "",
+    "bnsSection": "45",
+    "bnsTitle": "ABETMENT OF A THING",
+    "changeType": "renamed",
+    "notes": "Section 107 IPC consolidated into BNS Section 45 as ABETMENT OF A THING"
+  },
+  {
+    "ipcSection": "108",
+    "ipcTitle": "",
+    "bnsSection": "46",
+    "bnsTitle": "ABETTOR",
+    "changeType": "renamed",
+    "notes": "Section 108 IPC consolidated into BNS Section 46 as ABETTOR"
+  },
+  {
+    "ipcSection": "108A",
+    "ipcTitle": "",
+    "bnsSection": "47",
+    "bnsTitle": "ABETMENT IN INDIA OF OFFENCES OUTSIDE INDIA",
+    "changeType": "modified",
+    "notes": "Illustration to BNS Section 47 altered by replacing ‘Goa’ with ‘country X’ as per IPC Section 108A."
+  },
+  {
+    "ipcSection": "109",
+    "ipcTitle": "",
+    "bnsSection": "49",
+    "bnsTitle": "PUNISHMENT OF ABETMENT IF ACT ABETTED IS COMMITTED IN CONSEQUENCE AND WHERE NO EXPRESS PROVISION IS MADE FOR ITS PUNISHMENT",
+    "changeType": "renamed",
+    "notes": "BNS Section 49 corresponds with IPC Section 109; illustration (a) to IPC Section 109 has been deleted from BNS."
+  },
+  {
+    "ipcSection": "110",
+    "ipcTitle": "Abetment of offence punishable with death or imprisonment for life",
+    "bnsSection": "104",
+    "bnsTitle": "",
+    "changeType": "modified",
+    "notes": "Corresponds to BNS Section 104; punishment provision altered."
+  },
+  {
+    "ipcSection": "111",
+    "ipcTitle": "Abetment of offence punishable with imprisonment",
+    "bnsSection": "105",
+    "bnsTitle": "",
+    "changeType": "modified",
+    "notes": ""
+  },
+  {
+    "ipcSection": "112",
+    "ipcTitle": "Abetment of offence punishable with imprisonment (if offence not committed)",
+    "bnsSection": "106",
+    "bnsTitle": "",
+    "changeType": "modified",
+    "notes": ""
+  },
+  {
+    "ipcSection": "113",
+    "ipcTitle": "Abetment of offence punishable with imprisonment (if offence not committed) by a public servant",
+    "bnsSection": "107",
+    "bnsTitle": "",
+    "changeType": "modified",
+    "notes": ""
+  },
+  {
+    "ipcSection": "114",
+    "ipcTitle": "Abetment of offence punishable with imprisonment (if offence not committed) by a public servant",
+    "bnsSection": "108",
+    "bnsTitle": "",
+    "changeType": "modified",
+    "notes": ""
+  },
+  {
+    "ipcSection": "115",
+    "ipcTitle": "Abetment of offence punishable with imprisonment (if offence not committed) by a public servant",
+    "bnsSection": "109",
+    "bnsTitle": "",
+    "changeType": "modified",
+    "notes": ""
+  },
+  {
+    "ipcSection": "116",
+    "ipcTitle": "Abetment of offence punishable with death or imprisonment for life (if offence not committed)",
+    "bnsSection": "110",
+    "bnsTitle": "",
+    "changeType": "modified",
+    "notes": ""
+  },
+  {
+    "ipcSection": "117",
+    "ipcTitle": "Abetment of offence by public or by more than ten persons",
+    "bnsSection": "111",
+    "bnsTitle": "",
+    "changeType": "modified",
+    "notes": ""
+  },
+  {
+    "ipcSection": "118",
+    "ipcTitle": "",
+    "bnsSection": "112",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "Footnote indicates IPC Section 118 maps to BNS Section 112."
+  },
+  {
+    "ipcSection": "119",
+    "ipcTitle": "",
+    "bnsSection": "113",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "Footnote indicates IPC Section 119 maps to BNS Section 113."
+  },
+  {
+    "ipcSection": "120",
+    "ipcTitle": "",
+    "bnsSection": "114",
+    "bnsTitle": "Concealing design to commit offence punishable with imprisonment",
+    "changeType": "",
+    "notes": "Footnote indicates IPC Section 120 maps to BNS Section 114."
+  },
+  {
+    "ipcSection": "120A",
+    "ipcTitle": "",
+    "bnsSection": "61",
+    "bnsTitle": "Criminal Conspiracy",
+    "changeType": "merged",
+    "notes": "BNS Section 61 consolidates IPC Sections 120A and 120B."
+  },
+  {
+    "ipcSection": "120B",
+    "ipcTitle": "",
+    "bnsSection": "61",
+    "bnsTitle": "Criminal Conspiracy",
+    "changeType": "merged",
+    "notes": "BNS Section 61 consolidates IPC Sections 120A and 120B."
+  },
+  {
+    "ipcSection": "121",
+    "ipcTitle": "",
+    "bnsSection": "147",
+    "bnsTitle": "WAGING, OR ATTEMPTING TO WAGE WAR, OR ABETTING WAGING OF WAR, AGAINST GOVERNMENT OF INDIA.",
+    "changeType": "",
+    "notes": "Corresponds to IPC Section 121"
+  },
+  {
+    "ipcSection": "121A",
+    "ipcTitle": "",
+    "bnsSection": "148",
+    "bnsTitle": "CONSPIRACY TO COMMIT OFFENCES PUNISHABLE BY SECTION 147",
+    "changeType": "",
+    "notes": "Corresponds to IPC Section 121A"
+  },
+  {
+    "ipcSection": "122",
+    "ipcTitle": "",
+    "bnsSection": "151",
+    "bnsTitle": "ASSAULTING PRESIDENT, GOVERNOR, ETC., WITH INTENT TO COMPEL OR RESTRAIN EXERCISE OF ANY LAWFUL POWER.",
+    "changeType": "",
+    "notes": "Corresponds to IPC Section 122"
+  },
+  {
+    "ipcSection": "123",
+    "ipcTitle": "",
+    "bnsSection": "152",
+    "bnsTitle": "ACT ENDANGERING SOVEREIGNTY, UNITY AND INTEGRITY OF INDIA.",
+    "changeType": "",
+    "notes": "Corresponds to IPC Section 123"
+  },
+  {
+    "ipcSection": "125",
+    "ipcTitle": "Waging war against any Asiatic Power in alliance with the Government of India",
+    "bnsSection": "153",
+    "bnsTitle": "Waging war against Government of any foreign State at peace with Government of India",
+    "changeType": "renamed",
+    "notes": "Marginal heading changed; phrase ‘Asiatic power in alliance’ replaced with ‘State at peace with the Government of India’"
+  },
+  {
+    "ipcSection": "126",
+    "ipcTitle": "Committing depredation on territories of Power at peace with the Government of India",
+    "bnsSection": "154",
+    "bnsTitle": "Committing depredation on territories of foreign State at peace with Government of India",
+    "changeType": "renamed",
+    "notes": "Phrase ‘power in alliance’ replaced with ‘State at peace with the Government of India’"
+  },
+  {
+    "ipcSection": "131",
+    "ipcTitle": "",
+    "bnsSection": "159",
+    "bnsTitle": "Abetting mutiny, or attempting to seduce a soldier, sailor or airman from his duty",
+    "changeType": "renamed",
+    "notes": "Explanation to IPC Section 131 removed in BNS"
+  },
+  {
+    "ipcSection": "133",
+    "ipcTitle": "Abetment of assault by soldier, sailor or airman on his superior officer, when in execution of his office.",
+    "bnsSection": "161",
+    "bnsTitle": "ABETMENT OF ASSAULT BY SOLDIER, SAILOR OR AIRMAN ON HIS SUPERIOR OFFICER, WHEN IN EXECUTION OF HIS OFFICE.",
+    "changeType": "renamed",
+    "notes": "BNS section 161 mirrors IPC 133 with updated numbering."
+  },
+  {
+    "ipcSection": "134",
+    "ipcTitle": "Abetment of such assault, if assault committed.",
+    "bnsSection": "162",
+    "bnsTitle": "ABETMENT OF SUCH ASSAULT, IF ASSAULT COMMITTED.",
+    "changeType": "renamed",
+    "notes": "BNS section 162 mirrors IPC 134."
+  },
+  {
+    "ipcSection": "135",
+    "ipcTitle": "Abetment of desertion of soldier, sailor or airman.",
+    "bnsSection": "163",
+    "bnsTitle": "ABETMENT OF DESERTION OF SOLDIER, SAILOR OR AIRMAN.",
+    "changeType": "renamed",
+    "notes": "BNS section 163 mirrors IPC 135."
+  },
+  {
+    "ipcSection": "136",
+    "ipcTitle": "Harbouring deserter.",
+    "bnsSection": "164",
+    "bnsTitle": "HARBOURING DESERTER.",
+    "changeType": "renamed",
+    "notes": "BNS section 164 corresponds to IPC 136 with updated terminology regarding spouse."
+  },
+  {
+    "ipcSection": "137",
+    "ipcTitle": "Deserter concealed on board merchant vessel through negligence of master.",
+    "bnsSection": "165",
+    "bnsTitle": "DESERTER CONCEALED ON BOARD MERCHANT VESSEL THROUGH NEGLIGENCE OF MASTER.",
+    "changeType": "modified",
+    "notes": "Punishment increased from 500 rupees (IPC) to up to 3000 rupees (BNS)."
+  },
+  {
+    "ipcSection": "138",
+    "ipcTitle": "Wearing garb or carrying token used by soldier, sailor or airman.",
+    "bnsSection": "166",
+    "bnsTitle": "WEARING GARB OR CARRYING TOKEN USED BY SOLDIER, SAILOR OR AIRMAN.",
+    "changeType": "modified",
+    "notes": "Punishment specified as 6 months or fine in BNS."
+  },
+  {
+    "ipcSection": "139",
+    "ipcTitle": "Persons subject to certain Acts.",
+    "bnsSection": "167",
+    "bnsTitle": "PERSONS SUBJECT TO CERTAIN ACTS.",
+    "changeType": "renamed",
+    "notes": "BNS section 167 mirrors IPC 139."
+  },
+  {
+    "ipcSection": "141",
+    "ipcTitle": "Unlawful assembly",
+    "bnsSection": "269",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "IPC Section 141 is referenced as Section 269 in BNS."
+  },
+  {
+    "ipcSection": "142",
+    "ipcTitle": "",
+    "bnsSection": "270",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS 270 corresponds to IPC Section 142"
+  },
+  {
+    "ipcSection": "143",
+    "ipcTitle": "",
+    "bnsSection": "270",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS 270 corresponds to IPC Section 143"
+  },
+  {
+    "ipcSection": "144",
+    "ipcTitle": "",
+    "bnsSection": "272",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS 272 corresponds to IPC Section 144"
+  },
+  {
+    "ipcSection": "145",
+    "ipcTitle": "",
+    "bnsSection": "271",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS 271 corresponds to IPC Section 145"
+  },
+  {
+    "ipcSection": "146",
+    "ipcTitle": "Punishment for rioting",
+    "bnsSection": "279",
+    "bnsTitle": "[Punishment for rioting]",
+    "changeType": "renamed",
+    "notes": "BNS 279 mirrors IPC Section 146"
+  },
+  {
+    "ipcSection": "147",
+    "ipcTitle": "Punishment for rioting armed with deadly weapon",
+    "bnsSection": "280",
+    "bnsTitle": "[Rioting armed with deadly weapon]",
+    "changeType": "renamed",
+    "notes": "BNS 280 mirrors IPC Section 147"
+  },
+  {
+    "ipcSection": "148",
+    "ipcTitle": "Wantonly giving provocation with intent to cause riot",
+    "bnsSection": "281",
+    "bnsTitle": "WANTONLY GIVING PROVOCATION WITH INTENT TO CAUSE RIOT- IF RIOTING BE COMMITTED; IF NOT COMMITTED",
+    "changeType": "renamed",
+    "notes": "BNS 281 mirrors IPC Section 148"
+  },
+  {
+    "ipcSection": "149",
+    "ipcTitle": "Every member of unlawful assembly guilty of offence committed in prosecution of common object",
+    "bnsSection": "278",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS 278 corresponds to IPC Section 149"
+  },
+  {
+    "ipcSection": "150",
+    "ipcTitle": "",
+    "bnsSection": "274",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS 274 corresponds to IPC Section 150"
+  },
+  {
+    "ipcSection": "151",
+    "ipcTitle": "",
+    "bnsSection": "273",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS 273 corresponds to IPC Section 151"
+  },
+  {
+    "ipcSection": "152",
+    "ipcTitle": "Punishment for assaulting or obstructing a public servant when suppressing a riot, etc.",
+    "bnsSection": "195",
+    "bnsTitle": "Assaulting or obstructing public servant when suppressing riot, etc.",
+    "changeType": "split",
+    "notes": "Section 195 of BNS splits IPC Section 152 into two sub‑sections covering assault/obstruction and threatening to assault/attempt to obstruct, with different punishments."
+  },
+  {
+    "ipcSection": "153AA",
+    "ipcTitle": "Punishment for knowingly carrying arms in any procession or organising, or holding or taking part in any mass drill or mass training with arms",
+    "bnsSection": "",
+    "bnsTitle": "",
+    "changeType": "repealed",
+    "notes": "Section 153AA of the IPC has been deleted from BNS."
+  },
+  {
+    "ipcSection": "153",
+    "ipcTitle": "",
+    "bnsSection": "282",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS 282 corresponds to IPC Section 153"
+  },
+  {
+    "ipcSection": "153A",
+    "ipcTitle": "Promoting enmity between different groups on grounds of religion, race, place of birth, residence, language, etc., and doing acts prejudicial to maintenance of harmony",
+    "bnsSection": "196",
+    "bnsTitle": "Promoting enmity between different groups on grounds of religion, race, place of birth, residence, language, etc., and doing acts prejudicial to maintenance of harmony",
+    "changeType": "modified",
+    "notes": "Added the words ‘through electronic communication’ in sub‑section (1)(a) of BNS Section 196."
+  },
+  {
+    "ipcSection": "153B",
+    "ipcTitle": "Imputations, assertions prejudicial to national integration",
+    "bnsSection": "197",
+    "bnsTitle": "Imputations, assertions prejudicial to national integration",
+    "changeType": "modified",
+    "notes": "Added the words ‘through electronic communication’ in sub‑section (1) and added sub‑clause (d) concerning spreading fake news that jeopardises sovereignty, unity, integrity or security of India."
+  },
+  {
+    "ipcSection": "154",
+    "ipcTitle": "Punishment for rioting",
+    "bnsSection": "283",
+    "bnsTitle": "Liability of owner, occupier, etc., of land on which an unlawful assembly is held or riot takes place",
+    "changeType": "renamed",
+    "notes": "BNS 283 replaces IPC Section 154 with liability provisions for landowners"
+  },
+  {
+    "ipcSection": "155",
+    "ipcTitle": "",
+    "bnsSection": "284",
+    "bnsTitle": "(2) Liability of person for whose benefit riot is committed",
+    "changeType": "renamed",
+    "notes": "BNS 284 corresponds to IPC Section 155"
+  },
+  {
+    "ipcSection": "156",
+    "ipcTitle": "",
+    "bnsSection": "285",
+    "bnsTitle": "(3) Liability of agent of owner or occupier for whose benefit riot is committed",
+    "changeType": "renamed",
+    "notes": "BNS 285 corresponds to IPC Section 156"
+  },
+  {
+    "ipcSection": "157",
+    "ipcTitle": "Punishment for rioting",
+    "bnsSection": "275",
+    "bnsTitle": "Being hired to take part in an unlawful assembly or riot",
+    "changeType": "renamed",
+    "notes": "BNS 275 replaces IPC 157 with provision on hired participation in unlawful assembly or riot"
+  },
+  {
+    "ipcSection": "158",
+    "ipcTitle": "Punishment for rioting armed with deadly weapon",
+    "bnsSection": "276",
+    "bnsTitle": "[or to go armed]",
+    "changeType": "renamed",
+    "notes": "BNS 276 replaces IPC 158 with provision on going armed while hired"
+  },
+  {
+    "ipcSection": "159",
+    "ipcTitle": "",
+    "bnsSection": "286",
+    "bnsTitle": "AFFRAY",
+    "changeType": "renamed",
+    "notes": "BNS 286 mirrors IPC Section 159"
+  },
+  {
+    "ipcSection": "160",
+    "ipcTitle": "",
+    "bnsSection": "287",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS 287 corresponds to IPC Section 160"
+  },
+  {
+    "ipcSection": "166A",
+    "ipcTitle": "Public servant disobeying direction under law",
+    "bnsSection": "199",
+    "bnsTitle": "Public servant disobeying direction under law",
+    "changeType": "modified",
+    "notes": "Identical to IPC 166A except addition of voyeurism offence in clause (c)"
+  },
+  {
+    "ipcSection": "167",
+    "ipcTitle": "Public servant framing an incorrect document with intent to cause injury",
+    "bnsSection": "294",
+    "bnsTitle": "INJURY.",
+    "changeType": "renamed",
+    "notes": "Section renamed to 'Injury' in BNS"
+  },
+  {
+    "ipcSection": "168",
+    "ipcTitle": "Public servant unlawfully engaging in trade",
+    "bnsSection": "202",
+    "bnsTitle": "Public servant unlawfully engaging in trade.",
+    "changeType": "modified",
+    "notes": "Punishment enhanced (community service added) compared to IPC"
+  },
+  {
+    "ipcSection": "169",
+    "ipcTitle": "Public servant unlawfully buying or bidding for property",
+    "bnsSection": "296",
+    "bnsTitle": "PUBLIC SERVANT UNLAWFULLY BUYING OR BIDDING FOR PROPERTY.",
+    "changeType": "renamed",
+    "notes": "Section title aligned with IPC provision"
+  },
+  {
+    "ipcSection": "170",
+    "ipcTitle": "Personating a public servant",
+    "bnsSection": "204",
+    "bnsTitle": "Personating a public servant.",
+    "changeType": "modified",
+    "notes": "Punishment modified (minimum six months, maximum three years) compared to IPC"
+  },
+  {
+    "ipcSection": "171A",
+    "ipcTitle": "",
+    "bnsSection": "242",
+    "bnsTitle": "For the purposes of this Chapter—",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "171B",
+    "ipcTitle": "",
+    "bnsSection": "243",
+    "bnsTitle": "BRIBERY",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "171C",
+    "ipcTitle": "",
+    "bnsSection": "244",
+    "bnsTitle": "UNDUE INFLUENCE AT ELECTIONS",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "171D",
+    "ipcTitle": "",
+    "bnsSection": "245",
+    "bnsTitle": "PERSONATION AT ELECTIONS",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "171E",
+    "ipcTitle": "",
+    "bnsSection": "246",
+    "bnsTitle": "PUNISHMENT FOR BRIBERY",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "171F",
+    "ipcTitle": "",
+    "bnsSection": "247",
+    "bnsTitle": "PUNISHMENT FOR UNDUE INFLUENCE OR PERSONATION AT AN ELECTION",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "171G",
+    "ipcTitle": "",
+    "bnsSection": "248",
+    "bnsTitle": "FALSE STATEMENT IN CONNECTION WITH AN ELECTION",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "171",
+    "ipcTitle": "Wearing garb or carrying token used by public servant with fraudulent intent",
+    "bnsSection": "205",
+    "bnsTitle": "Wearing garb or carrying token used by public servant with fraudulent intent.",
+    "changeType": "modified",
+    "notes": "Fine amount increased in BNS compared to IPC"
+  },
+  {
+    "ipcSection": "172",
+    "ipcTitle": "Absconding to avoid service of summons or other proceeding",
+    "bnsSection": "206",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "173",
+    "ipcTitle": "Preventing service of summons or other proceeding, or preventing publication thereof",
+    "bnsSection": "207",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "174",
+    "ipcTitle": "Non-attendance in obedience to an order from public servant",
+    "bnsSection": "208",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "174A",
+    "ipcTitle": "Non-appearance in response to a proclamation under section 82 of Act 2 of 1974",
+    "bnsSection": "209",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "175",
+    "ipcTitle": "Obstruction to public servant in discharge of his duty",
+    "bnsSection": "210",
+    "bnsTitle": "OMISSION TO PRODUCE DOCUMENT OR ELECTRONIC RECORD TO PUBLIC SERVANT BY PERSON LEGALLY BOUND TO PRODUCE IT",
+    "changeType": "modified",
+    "notes": "Marginal heading of the section has been modified to include the term ‘electronic record’"
+  },
+  {
+    "ipcSection": "176",
+    "ipcTitle": "Omission to give notice or information to public servant by person legally bound to give it",
+    "bnsSection": "211",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "177",
+    "ipcTitle": "Furnishing false information",
+    "bnsSection": "212",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "178",
+    "ipcTitle": "",
+    "bnsSection": "307",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "179",
+    "ipcTitle": "",
+    "bnsSection": "308",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "180",
+    "ipcTitle": "",
+    "bnsSection": "309",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "181",
+    "ipcTitle": "",
+    "bnsSection": "310",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "182",
+    "ipcTitle": "",
+    "bnsSection": "311",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "183",
+    "ipcTitle": "",
+    "bnsSection": "312",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "184",
+    "ipcTitle": "",
+    "bnsSection": "313",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "185",
+    "ipcTitle": "",
+    "bnsSection": "314",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "186",
+    "ipcTitle": "",
+    "bnsSection": "315",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "187",
+    "ipcTitle": "",
+    "bnsSection": "316",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "188",
+    "ipcTitle": "Disobedience to order duly promulgated by public servant",
+    "bnsSection": "223",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "189",
+    "ipcTitle": "Unlawful assembly",
+    "bnsSection": "141",
+    "bnsTitle": "Unlawful assembly",
+    "changeType": "renamed",
+    "notes": "Corresponds to IPC 189(1)"
+  },
+  {
+    "ipcSection": "190",
+    "ipcTitle": "Every member of unlawful assembly guilty of offence committed in prosecution of common object",
+    "bnsSection": "149",
+    "bnsTitle": "Every member of unlawful assembly guilty of offence committed in prosecution of common object",
+    "changeType": "renamed",
+    "notes": "Corresponds to IPC 190"
+  },
+  {
+    "ipcSection": "191",
+    "ipcTitle": "Rioting",
+    "bnsSection": "146",
+    "bnsTitle": "Rioting",
+    "changeType": "renamed",
+    "notes": "Corresponds to IPC 191(1)"
+  },
+  {
+    "ipcSection": "192",
+    "ipcTitle": "Wantonly giving provocation with intent to cause riot—if rioting be committed; if not committed",
+    "bnsSection": "153",
+    "bnsTitle": "Wantonly giving provocation with intent to cause riot—if rioting be committed; if not committed",
+    "changeType": "renamed",
+    "notes": "Corresponds to IPC 192"
+  },
+  {
+    "ipcSection": "193",
+    "ipcTitle": "Owner or occupier of land on which an unlawful assembly is held",
+    "bnsSection": "154",
+    "bnsTitle": "Owner or occupier of land on which an unlawful assembly is held",
+    "changeType": "renamed",
+    "notes": "Corresponds to IPC 193(1)"
+  },
+  {
+    "ipcSection": "194",
+    "ipcTitle": "Affray",
+    "bnsSection": "159",
+    "bnsTitle": "Affray",
+    "changeType": "renamed",
+    "notes": "Corresponds to IPC 194(1)"
+  },
+  {
+    "ipcSection": "195",
+    "ipcTitle": "Assaulting or obstructing public servant when suppressing riot, etc.",
+    "bnsSection": "152",
+    "bnsTitle": "Assaulting or obstructing public servant when suppressing riot, etc.",
+    "changeType": "renamed",
+    "notes": "Corresponds to IPC 195"
+  },
+  {
+    "ipcSection": "196",
+    "ipcTitle": "Promoting enmity between different groups on ground of religion, race, place of birth, residence, language, etc., and doing acts prejudicial to maintenance of harmony",
+    "bnsSection": "153A",
+    "bnsTitle": "Promoting enmity between different groups on ground of religion, race, place of birth, residence, language, etc., and doing acts prejudicial to maintenance of harmony",
+    "changeType": "renamed",
+    "notes": "Corresponds to IPC 196"
+  },
+  {
+    "ipcSection": "197",
+    "ipcTitle": "Imputations, assertions prejudicial to national integration",
+    "bnsSection": "153B",
+    "bnsTitle": "Imputations, assertions prejudicial to national integration",
+    "changeType": "renamed",
+    "notes": "Corresponds to IPC 197"
+  },
+  {
+    "ipcSection": "198",
+    "ipcTitle": "",
+    "bnsSection": "235",
+    "bnsTitle": "USING AS TRUE A CERTIFICATE KNOWN TO BE FALSE.",
+    "changeType": "",
+    "notes": "Corresponds to IPC Section 198 as indicated by footnote 329."
+  },
+  {
+    "ipcSection": "199",
+    "ipcTitle": "",
+    "bnsSection": "236",
+    "bnsTitle": "FALSE STATEMENT MADE IN DECLARATION WHICH IS BY LAW RECEIVABLE AS EVIDENCE.",
+    "changeType": "",
+    "notes": "Corresponds to IPC Section 199 as indicated by footnote 330."
+  },
+  {
+    "ipcSection": "200",
+    "ipcTitle": "",
+    "bnsSection": "237",
+    "bnsTitle": "USING AS TRUE SUCH DECLARATION KNOWING IT TO BE FALSE.",
+    "changeType": "",
+    "notes": "Corresponds to IPC Section 200 as indicated by footnote 331."
+  },
+  {
+    "ipcSection": "201",
+    "ipcTitle": "",
+    "bnsSection": "238",
+    "bnsTitle": "CAUSING DISAPPEARANCE OF EVIDENCE OF OFFENCE, OR GIVING FALSE INFORMATION TO SCREEN OFFENDER.",
+    "changeType": "",
+    "notes": "Corresponds to IPC Section 201 as indicated by footnote 332."
+  },
+  {
+    "ipcSection": "202",
+    "ipcTitle": "Dishonest misappropriation of property",
+    "bnsSection": "335",
+    "bnsTitle": "DESTRUCTION OF DOCUMENT OR ELECTRONIC RECORD TO PREVENT ITS PRODUCTION AS EVIDENCE.",
+    "changeType": "renamed",
+    "notes": "BNS Section 335 replaces IPC Section 202 with updated terminology and scope."
+  },
+  {
+    "ipcSection": "203",
+    "ipcTitle": "Fraudulent claim to property to prevent its seizure as forfeited or in execution",
+    "bnsSection": "334",
+    "bnsTitle": "GIVING FALSE INFORMATION RESPECTING AN OFFENCE COMMITTED.",
+    "changeType": "renamed",
+    "notes": "BNS Section 334 corresponds to IPC Section 203, reflecting a re‑drafted provision."
+  },
+  {
+    "ipcSection": "204",
+    "ipcTitle": "Fraudulent removal or concealment of property to prevent its seizure as forfeited or in execution",
+    "bnsSection": "335",
+    "bnsTitle": "DESTRUCTION OF DOCUMENT OR ELECTRONIC RECORD TO PREVENT ITS PRODUCTION AS EVIDENCE.",
+    "changeType": "renamed",
+    "notes": "BNS Section 335 also incorporates the substance of IPC Section 204."
+  },
+  {
+    "ipcSection": "205",
+    "ipcTitle": "Fraudulent claim to property to prevent its seizure as forfeited or in execution",
+    "bnsSection": "336",
+    "bnsTitle": "FALSE PERSONATION FOR PURPOSE OF ACT OR PROCEEDING IN SUIT OR PROSECUTION",
+    "changeType": "renamed",
+    "notes": "BNS Section 336 maps to IPC Section 205 with modified language."
+  },
+  {
+    "ipcSection": "206",
+    "ipcTitle": "False charge of offence made with intent to injure",
+    "bnsSection": "337",
+    "bnsTitle": "FRAUDULENT REMOVAL OR CONCEALMENT OF PROPERTY TO PREVENT ITS SEIZURE AS FORFEITED OR IN EXECUTION.",
+    "changeType": "renamed",
+    "notes": "BNS Section 337 aligns with IPC Section 206, reflecting a re‑drafted provision."
+  },
+  {
+    "ipcSection": "207",
+    "ipcTitle": "Fraudulent claim to property to prevent its seizure as forfeited or in execution",
+    "bnsSection": "338",
+    "bnsTitle": "FRAUDULENT CLAIM TO PROPERTY TO PREVENT ITS SEIZURE AS FORFEITED OR IN EXECUTION.",
+    "changeType": "renamed",
+    "notes": "BNS Section 338 corresponds to IPC Section 207 with updated wording."
+  },
+  {
+    "ipcSection": "208",
+    "ipcTitle": "",
+    "bnsSection": "339",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "209",
+    "ipcTitle": "",
+    "bnsSection": "340",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "210",
+    "ipcTitle": "",
+    "bnsSection": "341",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "211",
+    "ipcTitle": "",
+    "bnsSection": "342",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "212",
+    "ipcTitle": "",
+    "bnsSection": "343",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "213",
+    "ipcTitle": "",
+    "bnsSection": "344",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "214",
+    "ipcTitle": "",
+    "bnsSection": "345",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "215",
+    "ipcTitle": "",
+    "bnsSection": "346",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "216",
+    "ipcTitle": "",
+    "bnsSection": "254",
+    "bnsTitle": "PENALTY FOR HARBOURING ROBBERS OR DACOITS",
+    "changeType": "",
+    "notes": "Corresponds to IPC Section 216 (Harbouring of offenders)"
+  },
+  {
+    "ipcSection": "216A",
+    "ipcTitle": "",
+    "bnsSection": "254",
+    "bnsTitle": "PENALTY FOR HARBOURING ROBBERS OR DACOITS",
+    "changeType": "",
+    "notes": "Corresponds to IPC Section 216A (Harbouring of dacoits)"
+  },
+  {
+    "ipcSection": "217",
+    "ipcTitle": "",
+    "bnsSection": "255",
+    "bnsTitle": "PUBLIC SERVANT DISOBEYING DIRECTION OF LAW WITH INTENT TO SAVE PERSON FROM PUNISHMENT OR PROPERTY FROM FORFEITURE",
+    "changeType": "",
+    "notes": "Corresponds to IPC Section 217"
+  },
+  {
+    "ipcSection": "218",
+    "ipcTitle": "",
+    "bnsSection": "256",
+    "bnsTitle": "PUBLIC SERVANT FRAMING INCORRECT RECORD OR WRITING WITH INTENT TO SAVE PERSON FROM PUNISHMENT OR PROPERTY FROM FORFEITURE",
+    "changeType": "",
+    "notes": "Corresponds to IPC Section 218"
+  },
+  {
+    "ipcSection": "219",
+    "ipcTitle": "",
+    "bnsSection": "257",
+    "bnsTitle": "PUBLIC SERVANT IN JUDICIAL PROCEEDING CORRUPTLY MAKING REPORT, ETC., CONTRARY TO LAW",
+    "changeType": "",
+    "notes": "Corresponds to IPC Section 219"
+  },
+  {
+    "ipcSection": "220",
+    "ipcTitle": "",
+    "bnsSection": "258",
+    "bnsTitle": "COMMITMENT FOR TRIAL OR CONFINEMENT BY PERSON HAVING AUTHORITY WHO KNOWS THAT HE IS ACTING CONTRARY TO LAW",
+    "changeType": "",
+    "notes": "Corresponds to IPC Section 220"
+  },
+  {
+    "ipcSection": "221",
+    "ipcTitle": "",
+    "bnsSection": "261",
+    "bnsTitle": "ESCAPE FROM CONFINEMENT OR CUSTODY NEGLIGENTLY SUFFERED BY PUBLIC SERVANT.",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "222",
+    "ipcTitle": "",
+    "bnsSection": "261",
+    "bnsTitle": "ESCAPE FROM CONFINEMENT OR CUSTODY NEGLIGENTLY SUFFERED BY PUBLIC SERVANT.",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "223",
+    "ipcTitle": "",
+    "bnsSection": "263",
+    "bnsTitle": "RESISTANCE OR OBSTRUCTION TO LAWFUL APPREHENSION OF ANOTHER PERSON.",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "224",
+    "ipcTitle": "",
+    "bnsSection": "263",
+    "bnsTitle": "RESISTANCE OR OBSTRUCTION TO LAWFUL APPREHENSION OF ANOTHER PERSON.",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "225",
+    "ipcTitle": "",
+    "bnsSection": "263",
+    "bnsTitle": "RESISTANCE OR OBSTRUCTION TO LAWFUL APPREHENSION OF ANOTHER PERSON.",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "225A",
+    "ipcTitle": "",
+    "bnsSection": "267",
+    "bnsTitle": "INTENTIONAL INSULT OR INTERRUPTION TO PUBLIC SERVANT SITTING IN JUDICIAL PROCEEDING.",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "225B",
+    "ipcTitle": "",
+    "bnsSection": "267",
+    "bnsTitle": "INTENTIONAL INSULT OR INTERRUPTION TO PUBLIC SERVANT SITTING IN JUDICIAL PROCEEDING.",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "227",
+    "ipcTitle": "",
+    "bnsSection": "267",
+    "bnsTitle": "INTENTIONAL INSULT OR INTERRUPTION TO PUBLIC SERVANT SITTING IN JUDICIAL PROCEEDING.",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "228A(1)",
+    "ipcTitle": "Disclosing identity of victim of certain offences",
+    "bnsSection": "72",
+    "bnsTitle": "Disclosure of identity of victim of certain offences, etc.",
+    "changeType": "split",
+    "notes": "Bifurcated from IPC 228A(1) into BNS Section 72."
+  },
+  {
+    "ipcSection": "228A(2)",
+    "ipcTitle": "Disclosing identity of victim of certain offences",
+    "bnsSection": "72",
+    "bnsTitle": "Disclosure of identity of victim of certain offences, etc.",
+    "changeType": "split",
+    "notes": "Bifurcated from IPC 228A(2) into BNS Section 72."
+  },
+  {
+    "ipcSection": "228A(3)",
+    "ipcTitle": "Printing or publishing any matter relating to court proceedings without permission",
+    "bnsSection": "73",
+    "bnsTitle": "Printing or publishing any matter relating to Court proceedings without permission",
+    "changeType": "split",
+    "notes": "Bifurcated from IPC 228A(3) into BNS Section 73."
+  },
+  {
+    "ipcSection": "228A",
+    "ipcTitle": "Disclosure of identity of the victim of certain offences, etc.",
+    "bnsSection": "72",
+    "bnsTitle": "Disclosure of identity of the victim of certain offences, etc.",
+    "changeType": "split",
+    "notes": "IPC 228A deleted; its provisions now in BNS sections 72 and 73."
+  },
+  {
+    "ipcSection": "228",
+    "ipcTitle": "Intentional insult or interruption to public servant sitting in judicial proceeding",
+    "bnsSection": "267",
+    "bnsTitle": "",
+    "changeType": "modified",
+    "notes": "Punishment increased from 1,000 rupees to 5,000 rupees."
+  },
+  {
+    "ipcSection": "230",
+    "ipcTitle": "Counterfeit currency note or bank-note",
+    "bnsSection": "178",
+    "bnsTitle": "Counterfeiting coin, government stamps, currency-notes or bank-notes",
+    "changeType": "merged",
+    "notes": "Section 178 of BNS merges Section 230 of IPC"
+  },
+  {
+    "ipcSection": "231",
+    "ipcTitle": "Counterfeiting coin",
+    "bnsSection": "178",
+    "bnsTitle": "Counterfeiting coin, government stamps, currency-notes or bank-notes",
+    "changeType": "merged",
+    "notes": "Section 178 of BNS merges Section 231 of IPC"
+  },
+  {
+    "ipcSection": "232",
+    "ipcTitle": "Counterfeiting Government stamp",
+    "bnsSection": "178",
+    "bnsTitle": "Counterfeiting coin, government stamps, currency-notes or bank-notes",
+    "changeType": "merged",
+    "notes": "Section 178 of BNS merges Section 232 of IPC"
+  },
+  {
+    "ipcSection": "233",
+    "ipcTitle": "",
+    "bnsSection": "181",
+    "bnsTitle": "Making or possessing instruments or materials for forging or counterfeiting coin, government stamp, currency-notes or bank-notes",
+    "changeType": "merged",
+    "notes": "Section 181 of BNS merges Section 233 of IPC"
+  },
+  {
+    "ipcSection": "234",
+    "ipcTitle": "",
+    "bnsSection": "181",
+    "bnsTitle": "Making or possessing instruments or materials for forging or counterfeiting coin, government stamp, currency-notes or bank-notes",
+    "changeType": "merged",
+    "notes": "Section 181 of BNS merges Section 234 of IPC"
+  },
+  {
+    "ipcSection": "235",
+    "ipcTitle": "",
+    "bnsSection": "181",
+    "bnsTitle": "Making or possessing instruments or materials for forging or counterfeiting coin, government stamp, currency-notes or bank-notes",
+    "changeType": "merged",
+    "notes": "Section 181 of BNS merges Section 235 of IPC"
+  },
+  {
+    "ipcSection": "236",
+    "ipcTitle": "Abetting in India the counterfeiting out of India of coin",
+    "bnsSection": "48",
+    "bnsTitle": "Abetment outside India for offence in India",
+    "changeType": "repealed",
+    "notes": "Section 236 of IPC deleted; provisions covered by newly inserted Section 48 of BNS"
+  },
+  {
+    "ipcSection": "237",
+    "ipcTitle": "",
+    "bnsSection": "179",
+    "bnsTitle": "Using as genuine, forged or counterfeit coin, government stamp, currency-notes or bank-notes",
+    "changeType": "merged",
+    "notes": "Section 179 of BNS merges Section 237 of IPC"
+  },
+  {
+    "ipcSection": "238",
+    "ipcTitle": "",
+    "bnsSection": "179",
+    "bnsTitle": "Using as genuine, forged or counterfeit coin, government stamp, currency-notes or bank-notes",
+    "changeType": "merged",
+    "notes": "Section 179 of BNS merges Section 238 of IPC"
+  },
+  {
+    "ipcSection": "239",
+    "ipcTitle": "",
+    "bnsSection": "179",
+    "bnsTitle": "Using as genuine, forged or counterfeit coin, government stamp, currency-notes or bank-notes",
+    "changeType": "merged",
+    "notes": "Section 179 of BNS merges Section 239 of IPC"
+  },
+  {
+    "ipcSection": "240",
+    "ipcTitle": "",
+    "bnsSection": "179",
+    "bnsTitle": "Using as genuine, forged or counterfeit coin, government stamp, currency-notes or bank-notes",
+    "changeType": "merged",
+    "notes": "Section 179 of BNS merges Section 240 of IPC"
+  },
+  {
+    "ipcSection": "241",
+    "ipcTitle": "",
+    "bnsSection": "179",
+    "bnsTitle": "Using as genuine, forged or counterfeit coin, government stamp, currency-notes or bank-notes",
+    "changeType": "merged",
+    "notes": "Section 179 of BNS merges Section 241 of IPC"
+  },
+  {
+    "ipcSection": "242",
+    "ipcTitle": "",
+    "bnsSection": "180",
+    "bnsTitle": "Possession of forged or counterfeit coin, government stamp, currency-notes or bank-notes",
+    "changeType": "merged",
+    "notes": "Section 180 of BNS merges Section 242 of IPC"
+  },
+  {
+    "ipcSection": "243",
+    "ipcTitle": "",
+    "bnsSection": "180",
+    "bnsTitle": "Possession of forged or counterfeit coin, government stamp, currency-notes or bank-notes",
+    "changeType": "merged",
+    "notes": "Section 180 of BNS merges Section 243 of IPC"
+  },
+  {
+    "ipcSection": "244",
+    "ipcTitle": "Person employed in mint causing coin to be of different weight or composition",
+    "bnsSection": "187",
+    "bnsTitle": "PERSON EMPLOYED IN MINT CAUSING COIN TO BE OF DIFFERENT WEIGHT OR COMPOSITION FROM THAT FIXED BY LAW.",
+    "changeType": "renamed",
+    "notes": "IPC 244 renamed as BNS 187"
+  },
+  {
+    "ipcSection": "245",
+    "ipcTitle": "Unlawfully taking coining instrument from mint",
+    "bnsSection": "188",
+    "bnsTitle": "UNLAWFULLY TAKING COINING INSTRUMENT FROM MINT.",
+    "changeType": "renamed",
+    "notes": "IPC 245 renamed as BNS 188"
+  },
+  {
+    "ipcSection": "246",
+    "ipcTitle": "Making or possessing instruments for counterfeiting coin, stamp, etc.",
+    "bnsSection": "178",
+    "bnsTitle": "Counterfeiting coin, government stamps, currency-notes or bank-notes",
+    "changeType": "merged",
+    "notes": "Section 178 of BNS merges Section 246 of IPC"
+  },
+  {
+    "ipcSection": "247",
+    "ipcTitle": "Possession of forged or counterfeit coin, stamp, etc.",
+    "bnsSection": "178",
+    "bnsTitle": "Counterfeiting coin, government stamps, currency-notes or bank-notes",
+    "changeType": "merged",
+    "notes": "Section 178 of BNS merges Section 247 of IPC"
+  },
+  {
+    "ipcSection": "248",
+    "ipcTitle": "Importing or exporting forged or counterfeit coin, stamp, etc.",
+    "bnsSection": "178",
+    "bnsTitle": "Counterfeiting coin, government stamps, currency-notes or bank-notes",
+    "changeType": "merged",
+    "notes": "Section 178 of BNS merges Section 248 of IPC"
+  },
+  {
+    "ipcSection": "249",
+    "ipcTitle": "Counterfeiting coin, stamp, etc.",
+    "bnsSection": "178",
+    "bnsTitle": "Counterfeiting coin, government stamps, currency-notes or bank-notes",
+    "changeType": "merged",
+    "notes": "Section 178 of BNS merges Section 249 of IPC"
+  },
+  {
+    "ipcSection": "250",
+    "ipcTitle": "",
+    "bnsSection": "179",
+    "bnsTitle": "Using as genuine, forged or counterfeit coin, government stamp, currency-notes or bank-notes",
+    "changeType": "merged",
+    "notes": "Section 179 of BNS merges Section 250 of IPC"
+  },
+  {
+    "ipcSection": "251",
+    "ipcTitle": "",
+    "bnsSection": "179",
+    "bnsTitle": "Using as genuine, forged or counterfeit coin, government stamp, currency-notes or bank-notes",
+    "changeType": "merged",
+    "notes": "Section 179 of BNS merges Section 251 of IPC"
+  },
+  {
+    "ipcSection": "252",
+    "ipcTitle": "",
+    "bnsSection": "180",
+    "bnsTitle": "Possession of forged or counterfeit coin, government stamp, currency-notes or bank-notes",
+    "changeType": "merged",
+    "notes": "Section 180 of BNS merges Section 252 of IPC"
+  },
+  {
+    "ipcSection": "253",
+    "ipcTitle": "",
+    "bnsSection": "180",
+    "bnsTitle": "Possession of forged or counterfeit coin, government stamp, currency-notes or bank-notes",
+    "changeType": "merged",
+    "notes": "Section 180 of BNS merges Section 253 of IPC"
+  },
+  {
+    "ipcSection": "254",
+    "ipcTitle": "",
+    "bnsSection": "179",
+    "bnsTitle": "Using as genuine, forged or counterfeit coin, government stamp, currency-notes or bank-notes",
+    "changeType": "merged",
+    "notes": "Section 179 of BNS merges Section 254 of IPC"
+  },
+  {
+    "ipcSection": "255",
+    "ipcTitle": "Counterfeiting coin, stamp, etc.",
+    "bnsSection": "178",
+    "bnsTitle": "Counterfeiting coin, government stamps, currency-notes or bank-notes",
+    "changeType": "merged",
+    "notes": "Section 178 of BNS merges Section 255 of IPC"
+  },
+  {
+    "ipcSection": "256",
+    "ipcTitle": "",
+    "bnsSection": "181",
+    "bnsTitle": "Making or possessing instruments or materials for forging or counterfeiting coin, government stamp, currency-notes or bank-notes",
+    "changeType": "merged",
+    "notes": "Section 181 of BNS merges Section 256 of IPC"
+  },
+  {
+    "ipcSection": "257",
+    "ipcTitle": "",
+    "bnsSection": "181",
+    "bnsTitle": "Making or possessing instruments or materials for forging or counterfeiting coin, government stamp, currency-notes or bank-notes",
+    "changeType": "merged",
+    "notes": "Section 181 of BNS merges Section 257 of IPC"
+  },
+  {
+    "ipcSection": "258",
+    "ipcTitle": "",
+    "bnsSection": "179",
+    "bnsTitle": "Using as genuine, forged or counterfeit coin, government stamp, currency-notes or bank-notes",
+    "changeType": "merged",
+    "notes": "Section 179 of BNS merges Section 258 of IPC"
+  },
+  {
+    "ipcSection": "259",
+    "ipcTitle": "",
+    "bnsSection": "180",
+    "bnsTitle": "Possession of forged or counterfeit coin, government stamp, currency-notes or bank-notes",
+    "changeType": "merged",
+    "notes": "Section 180 of BNS merges Section 259 of IPC"
+  },
+  {
+    "ipcSection": "260",
+    "ipcTitle": "",
+    "bnsSection": "179",
+    "bnsTitle": "Using as genuine, forged or counterfeit coin, government stamp, currency-notes or bank-notes",
+    "changeType": "merged",
+    "notes": "Section 179 of BNS merges Section 260 of IPC"
+  },
+  {
+    "ipcSection": "261",
+    "ipcTitle": "Removal or effacement of Government stamp",
+    "bnsSection": "183",
+    "bnsTitle": "EFFACING WRITING FROM SUBSTANCE BEARING GOVERNMENT STAMP, OR REMOVING FROM DOCUMENT A STAMP USED FOR IT, WITH INTENT TO CAUSE LOSS TO GOVERNMENT.",
+    "changeType": "renamed",
+    "notes": "IPC 261 renamed as BNS 183"
+  },
+  {
+    "ipcSection": "262",
+    "ipcTitle": "Using Government stamp known to have been before used",
+    "bnsSection": "184",
+    "bnsTitle": "USING GOVERNMENT STAMP KNOWN TO HAVE BEEN BEFORE USED.",
+    "changeType": "renamed",
+    "notes": "IPC 262 renamed as BNS 184"
+  },
+  {
+    "ipcSection": "263",
+    "ipcTitle": "Erasure of mark denoting that stamp has been used",
+    "bnsSection": "185",
+    "bnsTitle": "ERASURE OF MARK DENOTING THAT STAMP HAS BEEN USED.",
+    "changeType": "renamed",
+    "notes": "IPC 263 renamed as BNS 185"
+  },
+  {
+    "ipcSection": "263A",
+    "ipcTitle": "Counterfeiting coin",
+    "bnsSection": "265",
+    "bnsTitle": "PROHIBITION OF FICTITIOUS STAMPS.",
+    "changeType": "renamed",
+    "notes": "IPC 263A renamed as BNS 265"
+  },
+  {
+    "ipcSection": "268",
+    "ipcTitle": "",
+    "bnsSection": "365",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "BNS Section 365 corresponds to IPC Section 268, 1860."
+  },
+  {
+    "ipcSection": "269",
+    "ipcTitle": "",
+    "bnsSection": "366",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "BNS Section 366 corresponds to IPC Section 269, 1860."
+  },
+  {
+    "ipcSection": "270",
+    "ipcTitle": "",
+    "bnsSection": "367",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "BNS Section 367 corresponds to IPC Section 270, 1860."
+  },
+  {
+    "ipcSection": "271",
+    "ipcTitle": "",
+    "bnsSection": "368",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "BNS Section 368 corresponds to IPC Section 271, 1860."
+  },
+  {
+    "ipcSection": "272",
+    "ipcTitle": "",
+    "bnsSection": "369",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "BNS Section 369 corresponds to IPC Section 272, 1860."
+  },
+  {
+    "ipcSection": "279",
+    "ipcTitle": "",
+    "bnsSection": "376",
+    "bnsTitle": "RASH DRIVING OR RIDING ON A PUBLIC WAY.",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "280",
+    "ipcTitle": "",
+    "bnsSection": "377",
+    "bnsTitle": "RASH NAVIGATION OF VESSEL.",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "281",
+    "ipcTitle": "",
+    "bnsSection": "378",
+    "bnsTitle": "EXHIBITION OF FALSE LIGHT, MARK OR BUOY.",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "282",
+    "ipcTitle": "",
+    "bnsSection": "379",
+    "bnsTitle": "CONVEYING PERSON BY WATER FOR HIRE IN UNSAFE OR OVERLOADED VESSEL.",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "283",
+    "ipcTitle": "",
+    "bnsSection": "380",
+    "bnsTitle": "DANGER OR OBSTRUCTION IN PUBLIC WAY OR LINE OF NAVIGATION.",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "284",
+    "ipcTitle": "",
+    "bnsSection": "381",
+    "bnsTitle": "NEGLIGENT CONDUCT WITH RESPECT TO POISONOUS SUBSTANCE.",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "285",
+    "ipcTitle": "",
+    "bnsSection": "382",
+    "bnsTitle": "NEGLIGENT CONDUCT WITH RESPECT TO FIRE OR COMBUSTIBLE MATTER.",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "286",
+    "ipcTitle": "",
+    "bnsSection": "383",
+    "bnsTitle": "NEGLIGENT CONDUCT WITH RESPECT TO EXPLOSIVE SUBSTANCE.",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "287",
+    "ipcTitle": "",
+    "bnsSection": "384",
+    "bnsTitle": "NEGLIGENT CONDUCT WITH RESPECT TO MACHINERY.",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "288",
+    "ipcTitle": "",
+    "bnsSection": "385",
+    "bnsTitle": "NEGLIGENT CONDUCT WITH RESPECT TO BUILDING.",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "289",
+    "ipcTitle": "",
+    "bnsSection": "386",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "Footnote mapping"
+  },
+  {
+    "ipcSection": "290",
+    "ipcTitle": "",
+    "bnsSection": "387",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "Footnote mapping"
+  },
+  {
+    "ipcSection": "291",
+    "ipcTitle": "",
+    "bnsSection": "388",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "Footnote mapping"
+  },
+  {
+    "ipcSection": "292",
+    "ipcTitle": "",
+    "bnsSection": "389",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "Footnote mapping"
+  },
+  {
+    "ipcSection": "293",
+    "ipcTitle": "",
+    "bnsSection": "295",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "Section 295 of BNS corresponds to Section 293 of IPC"
+  },
+  {
+    "ipcSection": "294",
+    "ipcTitle": "",
+    "bnsSection": "391",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "Footnote mapping"
+  },
+  {
+    "ipcSection": "294A",
+    "ipcTitle": "",
+    "bnsSection": "392",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "Footnote mapping"
+  },
+  {
+    "ipcSection": "295A",
+    "ipcTitle": "",
+    "bnsSection": "299",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "Section 299 of BNS corresponds to Section 295A of IPC"
+  },
+  {
+    "ipcSection": "295",
+    "ipcTitle": "Injuring or defiling place of worship",
+    "bnsSection": "298",
+    "bnsTitle": "Injuring or defiling place of worship, with intent to insult the religion of any class",
+    "changeType": "renamed",
+    "notes": "IPC section 295 renumbered as BNS section 298"
+  },
+  {
+    "ipcSection": "296",
+    "ipcTitle": "Disturbing religious assembly",
+    "bnsSection": "300",
+    "bnsTitle": "Disturbing religious assembly",
+    "changeType": "renamed",
+    "notes": "IPC section 296 renumbered as BNS section 300"
+  },
+  {
+    "ipcSection": "297",
+    "ipcTitle": "Trespassing on burial places, etc.",
+    "bnsSection": "301",
+    "bnsTitle": "Trespassing on burial places, etc.",
+    "changeType": "renamed",
+    "notes": "IPC section 297 renumbered as BNS section 301"
+  },
+  {
+    "ipcSection": "298",
+    "ipcTitle": "Uttering words, etc., with deliberate intent to wound religious feelings",
+    "bnsSection": "302",
+    "bnsTitle": "Uttering words, etc., with deliberate intent to wound religious feelings",
+    "changeType": "renamed",
+    "notes": "IPC section 298 renumbered as BNS section 302"
+  },
+  {
+    "ipcSection": "299",
+    "ipcTitle": "Culpable homicide",
+    "bnsSection": "151",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "Reference to IPC Section 299 in BNS Section 151"
+  },
+  {
+    "ipcSection": "302",
+    "ipcTitle": "Murder",
+    "bnsSection": "103(2)",
+    "bnsTitle": "",
+    "changeType": "modified",
+    "notes": "BNS adds Section 103(2) for mob murders by a group of five or more on caste, community, race, etc., corresponding to IPC 302 under special circumstances."
+  },
+  {
+    "ipcSection": "304A",
+    "ipcTitle": "Causing death by negligence",
+    "bnsSection": "106",
+    "bnsTitle": "Causing death by negligence",
+    "changeType": "modified",
+    "notes": "BNS Section 106(1) increases punishment from up to 2 years (or fine) to up to 5 years and fine."
+  },
+  {
+    "ipcSection": "305",
+    "ipcTitle": "Abetment of suicide of child or person of unsound mind",
+    "bnsSection": "107",
+    "bnsTitle": "Abetment of suicide of child or person of unsound mind",
+    "changeType": "renamed",
+    "notes": "Phrase ‘insane person’ replaced with ‘person of unsound mind’ in BNS."
+  },
+  {
+    "ipcSection": "307",
+    "ipcTitle": "Attempt to murder",
+    "bnsSection": "109",
+    "bnsTitle": "Attempt to murder",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "309",
+    "ipcTitle": "Attempt to commit suicide",
+    "bnsSection": "",
+    "bnsTitle": "",
+    "changeType": "repealed",
+    "notes": "Section 309 of IPC has been deleted in BNS"
+  },
+  {
+    "ipcSection": "310",
+    "ipcTitle": "Thug",
+    "bnsSection": "",
+    "bnsTitle": "",
+    "changeType": "repealed",
+    "notes": "Section 310 of IPC has been deleted in BNS"
+  },
+  {
+    "ipcSection": "311",
+    "ipcTitle": "Punishment for being convicted as a thug",
+    "bnsSection": "",
+    "bnsTitle": "",
+    "changeType": "repealed",
+    "notes": "Section 311 of IPC has been deleted in BNS"
+  },
+  {
+    "ipcSection": "312",
+    "ipcTitle": "",
+    "bnsSection": "140",
+    "bnsTitle": "CAUSING MISCARRIAGE",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "313",
+    "ipcTitle": "",
+    "bnsSection": "141",
+    "bnsTitle": "CAUSING MISCARRIAGE WITHOUT WOMAN’S CONSENT",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "314",
+    "ipcTitle": "",
+    "bnsSection": "142",
+    "bnsTitle": "DEATH CAUSED BY ACT DONE WITH INTENT TO CAUSE MISCARRIAGE",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "315",
+    "ipcTitle": "",
+    "bnsSection": "143",
+    "bnsTitle": "ACT DONE WITH INTENT TO PREVENT CHILD BEING BORN ALIVE OR TO CAUSE TO DIE AFTER BIRTH",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "316",
+    "ipcTitle": "",
+    "bnsSection": "144",
+    "bnsTitle": "CAUSING DEATH OF QUICK UNBORN CHILD BY ACT MOUNTING TO CULPABLE HOMICIDE",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "317",
+    "ipcTitle": "",
+    "bnsSection": "145",
+    "bnsTitle": "EXPOSURE AND ABANDONMENT OF CHILD UNDER TWELVE YEARS OF AGE , BY PARENT OR PERSON HAVING CARE OF IT",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "318",
+    "ipcTitle": "",
+    "bnsSection": "146",
+    "bnsTitle": "CONCEALMENT OF BIRTH BY SECRET DISPOSAL OF DEAD BODY",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "320",
+    "ipcTitle": "Grievous hurt",
+    "bnsSection": "116",
+    "bnsTitle": "GRIEVOUS HURT",
+    "changeType": "modified",
+    "notes": "Duration threshold for severe bodily pain reduced from 20 days (IPC) to 15 days (BNS)"
+  },
+  {
+    "ipcSection": "321",
+    "ipcTitle": "Voluntarily causing hurt",
+    "bnsSection": "115",
+    "bnsTitle": "VOLUNTARILY TO CAUSING HURT",
+    "changeType": "renamed",
+    "notes": "Title wording changed from IPC to BNS"
+  },
+  {
+    "ipcSection": "322",
+    "ipcTitle": "Voluntarily causing grievous hurt",
+    "bnsSection": "117",
+    "bnsTitle": "VOLUNTARILY CAUSING GRIEVOUS HURT",
+    "changeType": "renamed",
+    "notes": "Title wording changed from IPC to BNS"
+  },
+  {
+    "ipcSection": "323",
+    "ipcTitle": "Punishment for voluntarily causing hurt",
+    "bnsSection": "115",
+    "bnsTitle": "VOLUNTARILY TO CAUSING HURT",
+    "changeType": "renamed",
+    "notes": "Punishment provision corresponds to IPC 323"
+  },
+  {
+    "ipcSection": "324",
+    "ipcTitle": "Voluntarily causing hurt by dangerous weapons or means",
+    "bnsSection": "118",
+    "bnsTitle": "VOLUNTARILY CAUSING HURT OR GRIEVOUS HURT BY DANGEROUS WEAPONS OR MEANS",
+    "changeType": "modified",
+    "notes": "BNS expands scope to include both hurt and grievous hurt by dangerous weapons"
+  },
+  {
+    "ipcSection": "325",
+    "ipcTitle": "Punishment for voluntarily causing grievous hurt",
+    "bnsSection": "117",
+    "bnsTitle": "VOLUNTARILY CAUSING GRIEVOUS HURT",
+    "changeType": "renamed",
+    "notes": "Punishment provision corresponds to IPC 325"
+  },
+  {
+    "ipcSection": "326",
+    "ipcTitle": "Punishment for voluntarily causing hurt by dangerous weapons or means",
+    "bnsSection": "118",
+    "bnsTitle": "VOLUNTARILY CAUSING HURT OR GRIEVOUS HURT BY DANGEROUS WEAPONS OR MEANS",
+    "changeType": "modified",
+    "notes": "Punishment provision aligns with IPC 326 but includes grievous hurt"
+  },
+  {
+    "ipcSection": "326A",
+    "ipcTitle": "",
+    "bnsSection": "125",
+    "bnsTitle": "ACT ENDANGERING LIFE OR PERSONAL SAFETY OF OTHERS.",
+    "changeType": "",
+    "notes": "Footnote mapping in BNS Section 125."
+  },
+  {
+    "ipcSection": "326B",
+    "ipcTitle": "",
+    "bnsSection": "125",
+    "bnsTitle": "ACT ENDANGERING LIFE OR PERSONAL SAFETY OF OTHERS.",
+    "changeType": "",
+    "notes": "Footnote mapping in BNS Section 125."
+  },
+  {
+    "ipcSection": "327",
+    "ipcTitle": "Voluntarily causing hurt to deter public servant from his duty",
+    "bnsSection": "120",
+    "bnsTitle": "VOLUNTARILY CAUSING HURT OR GRIEVOUS HURT TO EXTORT CONFESSION, OR TO COMPEL RESTORATION OF PROPERTY.",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "329",
+    "ipcTitle": "Voluntarily causing grievous hurt to deter public servant from his duty",
+    "bnsSection": "121",
+    "bnsTitle": "VOLUNTARILY CAUSING HURT OR GRIEVOUS HURT TO DETER PUBLIC SERVANT FROM HIS DUTY.",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "330",
+    "ipcTitle": "Voluntarily causing hurt on provocation",
+    "bnsSection": "122",
+    "bnsTitle": "VOLUNTARILY CAUSING HURT OR GRIEVOUS HURT ON PROVOCATION.",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "331",
+    "ipcTitle": "Voluntarily causing hurt by means of poison, etc., with intent to commit an offence",
+    "bnsSection": "123",
+    "bnsTitle": "CAUSING HURT BY MEANS OF POISON, etc., WITH INTENT TO COMMIT AN OFFENCE.",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "332",
+    "ipcTitle": "Voluntarily causing hurt to deter public servant from his duty.",
+    "bnsSection": "121",
+    "bnsTitle": "Voluntarily causing hurt or grievous hurt to deter public servant from his duty.",
+    "changeType": "merged",
+    "notes": "Consolidated into BNS section 121"
+  },
+  {
+    "ipcSection": "333",
+    "ipcTitle": "Voluntarily causing grievous hurt to deter public servant from his duty.",
+    "bnsSection": "121",
+    "bnsTitle": "Voluntarily causing hurt or grievous hurt to deter public servant from his duty.",
+    "changeType": "merged",
+    "notes": "Consolidated into BNS section 121"
+  },
+  {
+    "ipcSection": "334",
+    "ipcTitle": "Voluntarily causing hurt on provocation.",
+    "bnsSection": "122",
+    "bnsTitle": "Voluntarily causing hurt or grievous hurt on provocation.",
+    "changeType": "merged",
+    "notes": "Consolidated into BNS section 122"
+  },
+  {
+    "ipcSection": "335",
+    "ipcTitle": "Voluntarily causing grievous hurt on provocation.",
+    "bnsSection": "122",
+    "bnsTitle": "Voluntarily causing hurt or grievous hurt on provocation.",
+    "changeType": "merged",
+    "notes": "Consolidated into BNS section 122"
+  },
+  {
+    "ipcSection": "336",
+    "ipcTitle": "",
+    "bnsSection": "125",
+    "bnsTitle": "ACT ENDANGERING LIFE OR PERSONAL SAFETY OF OTHERS.",
+    "changeType": "",
+    "notes": "Footnote mapping in BNS Section 125."
+  },
+  {
+    "ipcSection": "337",
+    "ipcTitle": "Causing hurt by act endangering life or personal safety of others.",
+    "bnsSection": "125(a)",
+    "bnsTitle": "Causing hurt by act endangering life or personal safety of others.",
+    "changeType": "merged",
+    "notes": "Consolidated into BNS subsection 125(a)"
+  },
+  {
+    "ipcSection": "338",
+    "ipcTitle": "Causing grievous hurt by act endangering life or personal safety of others.",
+    "bnsSection": "125(b)",
+    "bnsTitle": "Causing grievous hurt by act endangering life or personal safety of others.",
+    "changeType": "merged",
+    "notes": "Consolidated into BNS subsection 125(b)"
+  },
+  {
+    "ipcSection": "339",
+    "ipcTitle": "Wrongful restraint.",
+    "bnsSection": "126",
+    "bnsTitle": "Wrongful restraint.",
+    "changeType": "merged",
+    "notes": "Consolidated into BNS section 126"
+  },
+  {
+    "ipcSection": "340",
+    "ipcTitle": "Wrongful confinement.",
+    "bnsSection": "127",
+    "bnsTitle": "Wrongful confinement.",
+    "changeType": "merged",
+    "notes": "Consolidated into BNS section 127"
+  },
+  {
+    "ipcSection": "349",
+    "ipcTitle": "",
+    "bnsSection": "128",
+    "bnsTitle": "FORCE",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "350",
+    "ipcTitle": "",
+    "bnsSection": "129",
+    "bnsTitle": "CRIMINAL FORCE",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "351",
+    "ipcTitle": "",
+    "bnsSection": "130",
+    "bnsTitle": "ASSAULT",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "352",
+    "ipcTitle": "",
+    "bnsSection": "133",
+    "bnsTitle": "ASSAULT OR CRIMINAL FORCE WITH INTENT TO DISHONOUR PERSON, OTHERWISE THAN ON GRAVE PROVOCATION.",
+    "changeType": "modified",
+    "notes": "Mapped via footnote 196; BNS section aligns with IPC Section 352."
+  },
+  {
+    "ipcSection": "353",
+    "ipcTitle": "",
+    "bnsSection": "133",
+    "bnsTitle": "ASSAULT OR CRIMINAL FORCE WITH INTENT TO DISHONOUR PERSON, OTHERWISE THAN ON GRAVE PROVOCATION.",
+    "changeType": "modified",
+    "notes": "Mapped via footnote 197; BNS section aligns with IPC Section 353."
+  },
+  {
+    "ipcSection": "354",
+    "ipcTitle": "Assault or criminal force to woman with intent to outrage her modesty",
+    "bnsSection": "126",
+    "bnsTitle": "Assault or use of criminal force to woman with intent to outrage her modesty",
+    "changeType": "renamed",
+    "notes": "Corresponds to IPC Section 354."
+  },
+  {
+    "ipcSection": "354A",
+    "ipcTitle": "Sexual harassment",
+    "bnsSection": "127",
+    "bnsTitle": "Sexual Harassment",
+    "changeType": "renamed",
+    "notes": "Corresponds to IPC Section 354A."
+  },
+  {
+    "ipcSection": "354B",
+    "ipcTitle": "Assault or criminal force to woman with intent to disrobe",
+    "bnsSection": "128",
+    "bnsTitle": "Assault or use of criminal force to woman with intent to disrobe",
+    "changeType": "renamed",
+    "notes": "Corresponds to IPC Section 354B."
+  },
+  {
+    "ipcSection": "354C",
+    "ipcTitle": "Voyeurism",
+    "bnsSection": "129",
+    "bnsTitle": "Voyeurism",
+    "changeType": "renamed",
+    "notes": "Corresponds to IPC Section 354C."
+  },
+  {
+    "ipcSection": "354D",
+    "ipcTitle": "Stalking",
+    "bnsSection": "78",
+    "bnsTitle": "STALKING",
+    "changeType": "new",
+    "notes": "Introduces offence of stalking corresponding to IPC 354D"
+  },
+  {
+    "ipcSection": "355",
+    "ipcTitle": "",
+    "bnsSection": "133",
+    "bnsTitle": "ASSAULT OR CRIMINAL FORCE WITH INTENT TO DISHONOUR PERSON, OTHERWISE THAN ON GRAVE PROVOCATION.",
+    "changeType": "modified",
+    "notes": "Mapped via footnote 198; BNS section aligns with IPC Section 355."
+  },
+  {
+    "ipcSection": "356",
+    "ipcTitle": "",
+    "bnsSection": "135",
+    "bnsTitle": "ASSAULT OR CRIMINAL FORCE IN ATTEMPT TO WRONGFULLY CONFINE A PERSON.",
+    "changeType": "modified",
+    "notes": "Mapped via footnote 199; BNS section aligns with IPC Section 356."
+  },
+  {
+    "ipcSection": "357",
+    "ipcTitle": "",
+    "bnsSection": "136",
+    "bnsTitle": "ASSAULT OR CRIMINAL FORCE ON GRAVE PROVOCATION.",
+    "changeType": "modified",
+    "notes": "Mapped via footnote 200; BNS section aligns with IPC Section 357."
+  },
+  {
+    "ipcSection": "358",
+    "ipcTitle": "",
+    "bnsSection": "136",
+    "bnsTitle": "ASSAULT OR CRIMINAL FORCE ON GRAVE PROVOCATION.",
+    "changeType": "modified",
+    "notes": "Mapped via footnote 201; BNS section aligns with IPC Section 358."
+  },
+  {
+    "ipcSection": "359",
+    "ipcTitle": "",
+    "bnsSection": "137",
+    "bnsTitle": "KIDNAPPING.",
+    "changeType": "modified",
+    "notes": "Mapped via footnote 202 and also noted in BNS Section 137 correspondence."
+  },
+  {
+    "ipcSection": "360",
+    "ipcTitle": "",
+    "bnsSection": "137",
+    "bnsTitle": "KIDNAPPING.",
+    "changeType": "modified",
+    "notes": "Mapped via footnote 203 and also noted in BNS Section 137 correspondence."
+  },
+  {
+    "ipcSection": "361",
+    "ipcTitle": "",
+    "bnsSection": "137",
+    "bnsTitle": "KIDNAPPING.",
+    "changeType": "modified",
+    "notes": "Mapped via footnote 204 and also noted in BNS Section 137 correspondence."
+  },
+  {
+    "ipcSection": "362",
+    "ipcTitle": "",
+    "bnsSection": "138",
+    "bnsTitle": "ABDUCTION.",
+    "changeType": "modified",
+    "notes": "Mapped via footnote 206; BNS section aligns with IPC Section 362."
+  },
+  {
+    "ipcSection": "363",
+    "ipcTitle": "",
+    "bnsSection": "137",
+    "bnsTitle": "KIDNAPPING.",
+    "changeType": "modified",
+    "notes": "Mapped via footnote 205 and also noted in BNS Section 137 correspondence."
+  },
+  {
+    "ipcSection": "363A",
+    "ipcTitle": "",
+    "bnsSection": "139",
+    "bnsTitle": "KIDNAPPING OR MAIMING A CHILD [ MINOR ] FOR PURPOSES OF BEGGING.",
+    "changeType": "modified",
+    "notes": "Mapped via footnote 207; BNS section aligns with IPC Section 363A."
+  },
+  {
+    "ipcSection": "364",
+    "ipcTitle": "",
+    "bnsSection": "140",
+    "bnsTitle": "Kidnapping or abducting in order to murder or for ransom, etc",
+    "changeType": "merged",
+    "notes": "Section 364 of IPC merged with sections 364A, 365 and 367 to form Section 140 of BNS"
+  },
+  {
+    "ipcSection": "364A",
+    "ipcTitle": "",
+    "bnsSection": "140",
+    "bnsTitle": "Kidnapping or abducting in order to murder or for ransom, etc",
+    "changeType": "merged",
+    "notes": "Section 364A of IPC merged with sections 364, 365 and 367 to form Section 140 of BNS"
+  },
+  {
+    "ipcSection": "365",
+    "ipcTitle": "",
+    "bnsSection": "140",
+    "bnsTitle": "Kidnapping or abducting in order to murder or for ransom, etc",
+    "changeType": "merged",
+    "notes": "Section 365 of IPC merged with sections 364, 364A and 367 to form Section 140 of BNS"
+  },
+  {
+    "ipcSection": "366",
+    "ipcTitle": "",
+    "bnsSection": "139",
+    "bnsTitle": "KIDNAPPING, ABDUCTING OR INDUCING WOMAN TO COMPEL HER MARRIAGE, ETC.",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "366A",
+    "ipcTitle": "Procuration of child",
+    "bnsSection": "96",
+    "bnsTitle": "Procuration of child",
+    "changeType": "modified",
+    "notes": "Terminology changed from ‘minor girl’ to ‘child’; gender neutrality introduced."
+  },
+  {
+    "ipcSection": "367",
+    "ipcTitle": "",
+    "bnsSection": "140",
+    "bnsTitle": "Kidnapping or abducting in order to murder or for ransom, etc",
+    "changeType": "merged",
+    "notes": "Section 367 of IPC merged with sections 364, 364A and 365 to form Section 140 of BNS"
+  },
+  {
+    "ipcSection": "369",
+    "ipcTitle": "Kidnapping or abducting a child under ten years of age with intent to steal from its person",
+    "bnsSection": "97",
+    "bnsTitle": "Kidnapping or abducting child under ten years of age with intent to steal from its person",
+    "changeType": "modified",
+    "notes": "Terminology updated to gender‑neutral ‘child’ instead of ‘minor girl’."
+  },
+  {
+    "ipcSection": "370",
+    "ipcTitle": "",
+    "bnsSection": "143",
+    "bnsTitle": "Trafficking of person",
+    "changeType": "renamed",
+    "notes": "Section 143 in BNS corresponds to Section 370 of IPC"
+  },
+  {
+    "ipcSection": "370A",
+    "ipcTitle": "",
+    "bnsSection": "144",
+    "bnsTitle": "Exploitation of a trafficked person",
+    "changeType": "renamed",
+    "notes": "Section 144 in BNS corresponds to Section 370A of IPC"
+  },
+  {
+    "ipcSection": "372",
+    "ipcTitle": "Selling child for purposes of prostitution, etc.",
+    "bnsSection": "98",
+    "bnsTitle": "Selling child for purposes of prostitution, etc.",
+    "changeType": "modified",
+    "notes": "Term ‘minor’ replaced with ‘child’; wording made gender neutral."
+  },
+  {
+    "ipcSection": "373",
+    "ipcTitle": "Buying child for purposes of prostitution, etc.",
+    "bnsSection": "99",
+    "bnsTitle": "Buying child for purpose of prostitution, etc.",
+    "changeType": "modified",
+    "notes": "Term ‘minor’ replaced with ‘child’; punishment increased (minimum 7 years, up to 14 years)."
+  },
+  {
+    "ipcSection": "375",
+    "ipcTitle": "Rape",
+    "bnsSection": "63",
+    "bnsTitle": "Definition of Rape",
+    "changeType": "modified",
+    "notes": "Section 63 of BNS defines ‘Rape’ and replaces Section 375 IPC, raising the marital exemption age from 15 to 18 years."
+  },
+  {
+    "ipcSection": "376",
+    "ipcTitle": "Punishment for rape",
+    "bnsSection": "64",
+    "bnsTitle": "Punishment for Rape",
+    "changeType": "modified",
+    "notes": "Section 64 of BNS mirrors IPC Section 376(1) and (2) with similar imprisonment terms."
+  },
+  {
+    "ipcSection": "376A",
+    "ipcTitle": "Punishment for causing death or persistent vegetative state of victim",
+    "bnsSection": "66",
+    "bnsTitle": "PUNISHMENT FOR CAUSING DEATH OR RESULTING IN PERSISTENT VEGETATIVE STATE OF VICTIM",
+    "changeType": "renamed",
+    "notes": "Section 66 of BNS corresponds to IPC section 376A."
+  },
+  {
+    "ipcSection": "376B",
+    "ipcTitle": "Sexual intercourse by husband upon his wife during separation",
+    "bnsSection": "67",
+    "bnsTitle": "SEXUAL INTERCOURSE BY HUSBAND UPON HIS WIFE DURING SEPARATION",
+    "changeType": "renamed",
+    "notes": "Section 67 of BNS corresponds to IPC section 376B."
+  },
+  {
+    "ipcSection": "376C",
+    "ipcTitle": "Sexual intercourse by a person in authority",
+    "bnsSection": "68",
+    "bnsTitle": "SEXUAL INTERCOURSE BY A PERSON IN AUTHORITY",
+    "changeType": "renamed",
+    "notes": "Section 68 of BNS corresponds to IPC section 376C."
+  },
+  {
+    "ipcSection": "376(3)",
+    "ipcTitle": "Punishment for rape on women under twelve years of age",
+    "bnsSection": "65",
+    "bnsTitle": "PUNISHMENT FOR RAPE IN CERTAIN CASES",
+    "changeType": "renamed",
+    "notes": "Section 65 of BNS includes IPC section 376(3)."
+  },
+  {
+    "ipcSection": "376AB",
+    "ipcTitle": "Punishment for rape on women under twelve years of age",
+    "bnsSection": "65",
+    "bnsTitle": "PUNISHMENT FOR RAPE IN CERTAIN CASES",
+    "changeType": "renamed",
+    "notes": "Section 65 of BNS includes IPC section 376AB."
+  },
+  {
+    "ipcSection": "376D",
+    "ipcTitle": "",
+    "bnsSection": "70",
+    "bnsTitle": "Gang Rape",
+    "changeType": "merged",
+    "notes": "Consolidated with IPC sections 376DA and 376DB into BNS Section 70."
+  },
+  {
+    "ipcSection": "376DA",
+    "ipcTitle": "",
+    "bnsSection": "70",
+    "bnsTitle": "Gang Rape",
+    "changeType": "merged",
+    "notes": "Consolidated with IPC sections 376D and 376DB into BNS Section 70."
+  },
+  {
+    "ipcSection": "376DB",
+    "ipcTitle": "",
+    "bnsSection": "70",
+    "bnsTitle": "Gang Rape",
+    "changeType": "merged",
+    "notes": "Consolidated with IPC sections 376D and 376DA into BNS Section 70."
+  },
+  {
+    "ipcSection": "377",
+    "ipcTitle": "Unnatural offences",
+    "bnsSection": "",
+    "bnsTitle": "",
+    "changeType": "repealed",
+    "notes": "Section 377 of IPC has been deleted from BNS following Supreme Court judgments."
+  },
+  {
+    "ipcSection": "378",
+    "ipcTitle": "Theft",
+    "bnsSection": "303",
+    "bnsTitle": "THEFT",
+    "changeType": "renamed",
+    "notes": "IPC section 378 incorporated as BNS section 303"
+  },
+  {
+    "ipcSection": "379",
+    "ipcTitle": "Punishment for theft",
+    "bnsSection": "303",
+    "bnsTitle": "Theft",
+    "changeType": "merged",
+    "notes": "Section 303 of BNS merges IPC sections 378 and 379."
+  },
+  {
+    "ipcSection": "380",
+    "ipcTitle": "Theft in a building, tent or vessel used as a human dwelling or for custody of property, etc.",
+    "bnsSection": "305",
+    "bnsTitle": "Theft in a dwelling house, or means of transportation, place of worship, etc.",
+    "changeType": "modified",
+    "notes": "Scope expanded with four new sub‑clauses and heading modified."
+  },
+  {
+    "ipcSection": "383",
+    "ipcTitle": "",
+    "bnsSection": "404",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS Section 404 corresponds to IPC Section 383"
+  },
+  {
+    "ipcSection": "384",
+    "ipcTitle": "",
+    "bnsSection": "405",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS Section 405 corresponds to IPC Section 384"
+  },
+  {
+    "ipcSection": "385",
+    "ipcTitle": "",
+    "bnsSection": "406",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS Section 406 corresponds to IPC Section 385"
+  },
+  {
+    "ipcSection": "386",
+    "ipcTitle": "",
+    "bnsSection": "408",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS Section 408 corresponds to IPC Section 386"
+  },
+  {
+    "ipcSection": "387",
+    "ipcTitle": "",
+    "bnsSection": "407",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS Section 407 corresponds to IPC Section 387"
+  },
+  {
+    "ipcSection": "388",
+    "ipcTitle": "",
+    "bnsSection": "409",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS Section 409 corresponds to IPC Section 388"
+  },
+  {
+    "ipcSection": "389",
+    "ipcTitle": "",
+    "bnsSection": "410",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS Section 410 corresponds to IPC Section 389"
+  },
+  {
+    "ipcSection": "390",
+    "ipcTitle": "",
+    "bnsSection": "413",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS Section 413 corresponds to IPC Section 390"
+  },
+  {
+    "ipcSection": "391",
+    "ipcTitle": "",
+    "bnsSection": "417",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS Section 417 corresponds to IPC Section 391"
+  },
+  {
+    "ipcSection": "392",
+    "ipcTitle": "",
+    "bnsSection": "414",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS Section 414 corresponds to IPC Section 392"
+  },
+  {
+    "ipcSection": "393",
+    "ipcTitle": "",
+    "bnsSection": "415",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS Section 415 corresponds to IPC Section 393"
+  },
+  {
+    "ipcSection": "394",
+    "ipcTitle": "",
+    "bnsSection": "416",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS Section 416 corresponds to IPC Section 394"
+  },
+  {
+    "ipcSection": "395",
+    "ipcTitle": "",
+    "bnsSection": "418",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS Section 418 corresponds to IPC Section 395"
+  },
+  {
+    "ipcSection": "396",
+    "ipcTitle": "",
+    "bnsSection": "419",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS Section 419 corresponds to IPC Section 396"
+  },
+  {
+    "ipcSection": "397",
+    "ipcTitle": "",
+    "bnsSection": "423",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS Section 423 corresponds to IPC Section 397"
+  },
+  {
+    "ipcSection": "398",
+    "ipcTitle": "",
+    "bnsSection": "424",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS Section 424 corresponds to IPC Section 398"
+  },
+  {
+    "ipcSection": "399",
+    "ipcTitle": "",
+    "bnsSection": "420",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS Section 420 corresponds to IPC Section 399"
+  },
+  {
+    "ipcSection": "400",
+    "ipcTitle": "",
+    "bnsSection": "422",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS Section 422 corresponds to IPC Section 400"
+  },
+  {
+    "ipcSection": "401",
+    "ipcTitle": "",
+    "bnsSection": "425",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS Section 425 corresponds to IPC Section 401"
+  },
+  {
+    "ipcSection": "402",
+    "ipcTitle": "",
+    "bnsSection": "421",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS Section 421 corresponds to IPC Section 402"
+  },
+  {
+    "ipcSection": "403",
+    "ipcTitle": "Dishonest misappropriation of property",
+    "bnsSection": "314",
+    "bnsTitle": "Dishonest misappropriation of property",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "404",
+    "ipcTitle": "Dishonest misappropriation of property possessed by a deceased person at the time of his death",
+    "bnsSection": "315",
+    "bnsTitle": "Dishonestly misappropriation of property possessed by deceased person at the time of his death",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "405",
+    "ipcTitle": "Criminal breach of trust by public servant, banker, merchant or agent",
+    "bnsSection": "316",
+    "bnsTitle": "CRIMINAL BREACH OF TRUST",
+    "changeType": "modified",
+    "notes": "BNS expands the IPC definition to a broader class of entrusted persons"
+  },
+  {
+    "ipcSection": "406",
+    "ipcTitle": "Punishment for criminal breach of trust",
+    "bnsSection": "316",
+    "bnsTitle": "CRIMINAL BREACH OF TRUST",
+    "changeType": "modified",
+    "notes": "BNS specifies differentiated punishments for various categories of offenders"
+  },
+  {
+    "ipcSection": "407",
+    "ipcTitle": "Criminal breach of trust by clerk or servant",
+    "bnsSection": "316",
+    "bnsTitle": "CRIMINAL BREACH OF TRUST",
+    "changeType": "modified",
+    "notes": "BNS includes a separate clause for carriers, wharfingers and warehouse‑keepers"
+  },
+  {
+    "ipcSection": "408",
+    "ipcTitle": "Punishment for criminal breach of trust by clerk or servant",
+    "bnsSection": "316",
+    "bnsTitle": "CRIMINAL BREACH OF TRUST",
+    "changeType": "modified",
+    "notes": "BNS provides a specific punishment provision for clerks and servants"
+  },
+  {
+    "ipcSection": "410",
+    "ipcTitle": "Punishment for criminal breach of trust by public servant, banker, merchant or agent",
+    "bnsSection": "316",
+    "bnsTitle": "CRIMINAL BREACH OF TRUST",
+    "changeType": "modified",
+    "notes": "BNS mirrors the IPC provision but integrates it within the broader breach‑of‑trust chapter"
+  },
+  {
+    "ipcSection": "411",
+    "ipcTitle": "",
+    "bnsSection": "317",
+    "bnsTitle": "Stolen property",
+    "changeType": "",
+    "notes": "BNS Section 317 corresponds to IPC Section 411."
+  },
+  {
+    "ipcSection": "412",
+    "ipcTitle": "",
+    "bnsSection": "317",
+    "bnsTitle": "Stolen property",
+    "changeType": "",
+    "notes": "BNS Section 317 corresponds to IPC Section 412."
+  },
+  {
+    "ipcSection": "413",
+    "ipcTitle": "",
+    "bnsSection": "317",
+    "bnsTitle": "Stolen property",
+    "changeType": "",
+    "notes": "BNS Section 317 corresponds to IPC Section 413."
+  },
+  {
+    "ipcSection": "414",
+    "ipcTitle": "",
+    "bnsSection": "317",
+    "bnsTitle": "Stolen property",
+    "changeType": "",
+    "notes": "BNS Section 317 corresponds to IPC Section 414."
+  },
+  {
+    "ipcSection": "423",
+    "ipcTitle": "Dishonest or fraudulent removal or concealment of property",
+    "bnsSection": "446",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "424",
+    "ipcTitle": "Dishonest removal or concealment of property",
+    "bnsSection": "447",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "425",
+    "ipcTitle": "Mischief",
+    "bnsSection": "448",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "426",
+    "ipcTitle": "",
+    "bnsSection": "324",
+    "bnsTitle": "Mischief",
+    "changeType": "modified",
+    "notes": "BNS Section 324 includes IPC Section 426."
+  },
+  {
+    "ipcSection": "427",
+    "ipcTitle": "",
+    "bnsSection": "324",
+    "bnsTitle": "Mischief",
+    "changeType": "modified",
+    "notes": "BNS Section 324 includes IPC Section 427."
+  },
+  {
+    "ipcSection": "428",
+    "ipcTitle": "",
+    "bnsSection": "325",
+    "bnsTitle": "Mischief by killing or maiming animal",
+    "changeType": "merged",
+    "notes": "IPC Sections 428 and 429 consolidated into BNS Section 325."
+  },
+  {
+    "ipcSection": "429",
+    "ipcTitle": "",
+    "bnsSection": "325",
+    "bnsTitle": "Mischief by killing or maiming animal",
+    "changeType": "merged",
+    "notes": "IPC Sections 428 and 429 consolidated into BNS Section 325."
+  },
+  {
+    "ipcSection": "430",
+    "ipcTitle": "Mischief by destroying, moving or rendering less useful a sign or signal used for navigation of rail, aircraft or ship",
+    "bnsSection": "326",
+    "bnsTitle": "",
+    "changeType": "merged",
+    "notes": "Section 326 of BNS merges IPC Section 430"
+  },
+  {
+    "ipcSection": "431",
+    "ipcTitle": "Mischief by destroying or moving any land-mark fixed by public authority",
+    "bnsSection": "326",
+    "bnsTitle": "",
+    "changeType": "merged",
+    "notes": "Section 326 of BNS merges IPC Section 431"
+  },
+  {
+    "ipcSection": "432",
+    "ipcTitle": "Mischief by fire or explosive substance with intent to cause damage to amount of one hundred rupees",
+    "bnsSection": "326",
+    "bnsTitle": "",
+    "changeType": "merged",
+    "notes": "Section 326 of BNS merges IPC Section 432"
+  },
+  {
+    "ipcSection": "433",
+    "ipcTitle": "Mischief by fire or explosive substance with intent to destroy house, etc.",
+    "bnsSection": "326",
+    "bnsTitle": "",
+    "changeType": "merged",
+    "notes": "Section 326(d) in BNS corresponds to IPC Section 433 and has been modified to include the terms ‘rail, aircraft’"
+  },
+  {
+    "ipcSection": "434",
+    "ipcTitle": "",
+    "bnsSection": "326",
+    "bnsTitle": "",
+    "changeType": "merged",
+    "notes": "Section 326 of BNS merges IPC Section 434"
+  },
+  {
+    "ipcSection": "435",
+    "ipcTitle": "",
+    "bnsSection": "326",
+    "bnsTitle": "",
+    "changeType": "merged",
+    "notes": "Section 326 of BNS merges IPC Section 435"
+  },
+  {
+    "ipcSection": "436",
+    "ipcTitle": "",
+    "bnsSection": "326",
+    "bnsTitle": "",
+    "changeType": "merged",
+    "notes": "Section 326 of BNS merges IPC Section 436"
+  },
+  {
+    "ipcSection": "437",
+    "ipcTitle": "Mischief by fire or explosive substance with intent to cause damage to property",
+    "bnsSection": "327",
+    "bnsTitle": "",
+    "changeType": "merged",
+    "notes": "Section 327 of BNS merges IPC Section 437; words ‘rail, aircraft’ have been added"
+  },
+  {
+    "ipcSection": "438",
+    "ipcTitle": "Mischief by fire or explosive substance with intent to cause damage to property",
+    "bnsSection": "327",
+    "bnsTitle": "",
+    "changeType": "merged",
+    "notes": "Section 327 of BNS merges IPC Section 438; words ‘rail, aircraft’ have been added"
+  },
+  {
+    "ipcSection": "440",
+    "ipcTitle": "",
+    "bnsSection": "324",
+    "bnsTitle": "Mischief",
+    "changeType": "modified",
+    "notes": "BNS Section 324 includes IPC Section 440."
+  },
+  {
+    "ipcSection": "446",
+    "ipcTitle": "Punishment for house‑trespass by night",
+    "bnsSection": "472",
+    "bnsTitle": "Punishment for (lurking) house‑trespass or house‑breaking",
+    "changeType": "renamed",
+    "notes": "BNS section 472 re‑codifies IPC 446 (punishment for house‑trespass by night) with updated wording"
+  },
+  {
+    "ipcSection": "449",
+    "ipcTitle": "Punishment for house‑trespass",
+    "bnsSection": "479",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "Mapped from IPC 449 to BNS 479"
+  },
+  {
+    "ipcSection": "450",
+    "ipcTitle": "Punishment for house‑trespass after preparation for hurt, assault or wrongful restraint",
+    "bnsSection": "480",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "Mapped from IPC 450 to BNS 480"
+  },
+  {
+    "ipcSection": "451",
+    "ipcTitle": "",
+    "bnsSection": "481",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "Mapped from IPC 451 to BNS 481"
+  },
+  {
+    "ipcSection": "452",
+    "ipcTitle": "",
+    "bnsSection": "482",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "Mapped from IPC 452 to BNS 482"
+  },
+  {
+    "ipcSection": "453",
+    "ipcTitle": "Punishment for house‑trespass",
+    "bnsSection": "471",
+    "bnsTitle": "Punishment for (lurking) house‑trespass or house‑breaking",
+    "changeType": "renamed",
+    "notes": "BNS section 471 re‑codifies IPC 453 (punishment for house‑trespass) with updated wording"
+  },
+  {
+    "ipcSection": "454",
+    "ipcTitle": "Punishment for house‑trespass in order to commit offence punishable with death",
+    "bnsSection": "473",
+    "bnsTitle": "Punishment for (lurking) house‑trespass or house‑breaking",
+    "changeType": "renamed",
+    "notes": "BNS section 473 re‑codifies IPC 454 (house‑trespass to commit offence punishable with death)"
+  },
+  {
+    "ipcSection": "455",
+    "ipcTitle": "Punishment for house‑trespass in order to commit offence punishable with imprisonment",
+    "bnsSection": "475",
+    "bnsTitle": "Punishment for (lurking) house‑trespass or house‑breaking",
+    "changeType": "renamed",
+    "notes": "BNS section 475 re‑codifies IPC 455 (house‑trespass to commit offence punishable with imprisonment)"
+  },
+  {
+    "ipcSection": "456",
+    "ipcTitle": "Punishment for lurking house‑trespass or house‑breaking",
+    "bnsSection": "472",
+    "bnsTitle": "Punishment for (lurking) house‑trespass or house‑breaking",
+    "changeType": "renamed",
+    "notes": "BNS section 472 also incorporates IPC 456 (punishment for lurking house‑trespass or house‑breaking)"
+  },
+  {
+    "ipcSection": "457",
+    "ipcTitle": "Punishment for house‑trespass in order to commit offence punishable with imprisonment for life",
+    "bnsSection": "474",
+    "bnsTitle": "Punishment for (lurking) house‑trespass or house‑breaking",
+    "changeType": "renamed",
+    "notes": "BNS section 474 re‑codifies IPC 457 (house‑trespass to commit offence punishable with imprisonment for life)"
+  },
+  {
+    "ipcSection": "458",
+    "ipcTitle": "Punishment for house‑trespass in order to commit offence punishable with imprisonment",
+    "bnsSection": "476",
+    "bnsTitle": "Punishment for (lurking) house‑trespass or house‑breaking",
+    "changeType": "renamed",
+    "notes": "BNS section 476 re‑codifies IPC 458 (house‑trespass to commit offence punishable with imprisonment)"
+  },
+  {
+    "ipcSection": "459",
+    "ipcTitle": "Punishment for house‑trespass",
+    "bnsSection": "477",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "Mapped from IPC 459 to BNS 477"
+  },
+  {
+    "ipcSection": "460",
+    "ipcTitle": "Punishment for house‑trespass after preparation for hurt, assault or wrongful restraint",
+    "bnsSection": "478",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "Mapped from IPC 460 to BNS 478"
+  },
+  {
+    "ipcSection": "461",
+    "ipcTitle": "",
+    "bnsSection": "483",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "Mapped from IPC 461 to BNS 483"
+  },
+  {
+    "ipcSection": "462",
+    "ipcTitle": "",
+    "bnsSection": "484",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "Mapped from IPC 462 to BNS 484"
+  },
+  {
+    "ipcSection": "463",
+    "ipcTitle": "Forgery of valuable security, will, etc.",
+    "bnsSection": "336",
+    "bnsTitle": "FORGERY",
+    "changeType": "merged",
+    "notes": "Section 463 of IPC, 1860 merged as a subsection of Section 336, BNS."
+  },
+  {
+    "ipcSection": "464",
+    "ipcTitle": "",
+    "bnsSection": "486",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "Section 486 of BNS corresponds to Section 464 of IPC (Chapter XVIII)."
+  },
+  {
+    "ipcSection": "465",
+    "ipcTitle": "Forgery of register",
+    "bnsSection": "336",
+    "bnsTitle": "FORGERY",
+    "changeType": "merged",
+    "notes": "Section 465 of IPC, 1860 merged as a subsection of Section 336, BNS."
+  },
+  {
+    "ipcSection": "466",
+    "ipcTitle": "",
+    "bnsSection": "337",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "BNS section 337 is cross‑referenced to IPC section 466."
+  },
+  {
+    "ipcSection": "467",
+    "ipcTitle": "",
+    "bnsSection": "338",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "BNS section 338 is cross‑referenced to IPC section 467."
+  },
+  {
+    "ipcSection": "468",
+    "ipcTitle": "Forgery for purpose of cheating",
+    "bnsSection": "336",
+    "bnsTitle": "FORGERY",
+    "changeType": "merged",
+    "notes": "Section 468 of IPC, 1860 merged as a subsection of Section 336, BNS."
+  },
+  {
+    "ipcSection": "469",
+    "ipcTitle": "Forgery for purpose of causing injury to reputation",
+    "bnsSection": "336",
+    "bnsTitle": "FORGERY",
+    "changeType": "merged",
+    "notes": "Section 469 of IPC, 1860 merged as a subsection of Section 336, BNS."
+  },
+  {
+    "ipcSection": "472",
+    "ipcTitle": "",
+    "bnsSection": "341",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "BNS section 341 corresponds to IPC section 472."
+  },
+  {
+    "ipcSection": "473",
+    "ipcTitle": "",
+    "bnsSection": "341",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": "BNS section 341 corresponds to IPC section 473."
+  },
+  {
+    "ipcSection": "477A",
+    "ipcTitle": "Falsification of accounts",
+    "bnsSection": "504",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS section 504 corresponds to IPC 477A"
+  },
+  {
+    "ipcSection": "479",
+    "ipcTitle": "Property mark",
+    "bnsSection": "505",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS section 505 corresponds to IPC 479"
+  },
+  {
+    "ipcSection": "481",
+    "ipcTitle": "Using a false property mark",
+    "bnsSection": "506",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS section 506 corresponds to IPC 481"
+  },
+  {
+    "ipcSection": "482",
+    "ipcTitle": "Punishment for using a false property mark",
+    "bnsSection": "507",
+    "bnsTitle": "",
+    "changeType": "renamed",
+    "notes": "BNS section 507 corresponds to IPC 482"
+  },
+  {
+    "ipcSection": "483",
+    "ipcTitle": "Counterfeiting a property mark used by another",
+    "bnsSection": "509",
+    "bnsTitle": "COUNTERFEITING A PROPERTY MARK.",
+    "changeType": "renamed",
+    "notes": "BNS section 509 corresponds to IPC 483"
+  },
+  {
+    "ipcSection": "484",
+    "ipcTitle": "Counterfeiting a mark used by a public servant",
+    "bnsSection": "510",
+    "bnsTitle": "Counterfeiting a mark used by a public servant",
+    "changeType": "renamed",
+    "notes": "BNS section 510 corresponds to IPC 484"
+  },
+  {
+    "ipcSection": "485",
+    "ipcTitle": "Making or possession of any instrument for counterfeiting a property mark",
+    "bnsSection": "511",
+    "bnsTitle": "Making or possession of any instrument for counterfeiting a property mark",
+    "changeType": "renamed",
+    "notes": "BNS section 511 corresponds to IPC 485"
+  },
+  {
+    "ipcSection": "486",
+    "ipcTitle": "Selling goods marked with a counterfeit property mark",
+    "bnsSection": "512",
+    "bnsTitle": "SELLING GOODS MARKED WITH A COUNTERFEIT PROPERTY MARK.",
+    "changeType": "renamed",
+    "notes": "BNS section 512 corresponds to IPC 486"
+  },
+  {
+    "ipcSection": "487",
+    "ipcTitle": "Making a false mark upon any receptacle containing goods",
+    "bnsSection": "513",
+    "bnsTitle": "MAKING A FALSE MARK UPON ANY RECEPTACLE CONTAINING GOODS.",
+    "changeType": "renamed",
+    "notes": "BNS section 513 corresponds to IPC 487"
+  },
+  {
+    "ipcSection": "488",
+    "ipcTitle": "Punishment for making use of any such false mark",
+    "bnsSection": "514",
+    "bnsTitle": "Punishment for making use of any such false mark",
+    "changeType": "renamed",
+    "notes": "BNS section 514 corresponds to IPC 488"
+  },
+  {
+    "ipcSection": "489A",
+    "ipcTitle": "Counterfeit currency note or bank-note",
+    "bnsSection": "178",
+    "bnsTitle": "Counterfeiting coin, government stamps, currency-notes or bank-notes",
+    "changeType": "merged",
+    "notes": "Section 178 of BNS merges Section 489A of IPC"
+  },
+  {
+    "ipcSection": "489B",
+    "ipcTitle": "",
+    "bnsSection": "179",
+    "bnsTitle": "Using as genuine, forged or counterfeit coin, government stamp, currency-notes or bank-notes",
+    "changeType": "merged",
+    "notes": "Section 179 of BNS merges Section 489B of IPC"
+  },
+  {
+    "ipcSection": "489C",
+    "ipcTitle": "",
+    "bnsSection": "180",
+    "bnsTitle": "Possession of forged or counterfeit coin, government stamp, currency-notes or bank-notes",
+    "changeType": "merged",
+    "notes": "Section 180 of BNS merges Section 489C of IPC"
+  },
+  {
+    "ipcSection": "489D",
+    "ipcTitle": "",
+    "bnsSection": "181",
+    "bnsTitle": "Making or possessing instruments or materials for forging or counterfeiting coin, government stamp, currency-notes or bank-notes",
+    "changeType": "merged",
+    "notes": "Section 181 of BNS merges Section 489D of IPC"
+  },
+  {
+    "ipcSection": "489E",
+    "ipcTitle": "Making or using documents resembling currency-notes or bank-notes",
+    "bnsSection": "182(1)",
+    "bnsTitle": "Making or using documents resembling currency-notes or bank-notes",
+    "changeType": "merged",
+    "notes": "IPC 489E merged into BNS 182(1)"
+  },
+  {
+    "ipcSection": "489",
+    "ipcTitle": "Tampering with property mark with intent to cause injury",
+    "bnsSection": "508",
+    "bnsTitle": "TAMPERING WITH PROPERTY MARK WITH INTENT TO CAUSE INJURY",
+    "changeType": "renamed",
+    "notes": "BNS section 508 corresponds to IPC 489"
+  },
+  {
+    "ipcSection": "491",
+    "ipcTitle": "Breach of contract to attend on and supply wants of helpless person",
+    "bnsSection": "357",
+    "bnsTitle": "Breach of contract to attend on and supply wants of helpless person",
+    "changeType": "renamed",
+    "notes": "IPC Section 491 renumbered and incorporated as BNS Section 357."
+  },
+  {
+    "ipcSection": "494",
+    "ipcTitle": "Marrying again during lifetime of husband or wife",
+    "bnsSection": "82",
+    "bnsTitle": "MARRYING AGAIN DURING LIFETIME OF HUSBAND OR WIFE",
+    "changeType": "merged",
+    "notes": "Consolidates IPC 494 with IPC 495 into a single BNS provision"
+  },
+  {
+    "ipcSection": "495",
+    "ipcTitle": "Same offence with concealment of former marriage from person with whom subsequent marriage is contracted",
+    "bnsSection": "82",
+    "bnsTitle": "MARRYING AGAIN DURING LIFETIME OF HUSBAND OR WIFE",
+    "changeType": "merged",
+    "notes": "Consolidates IPC 495 with IPC 494 into a single BNS provision"
+  },
+  {
+    "ipcSection": "496",
+    "ipcTitle": "",
+    "bnsSection": "135",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "497",
+    "ipcTitle": "Adultery",
+    "bnsSection": "",
+    "bnsTitle": "",
+    "changeType": "repealed",
+    "notes": "Section 497 of IPC has been deleted from BNS following Supreme Court judgments."
+  },
+  {
+    "ipcSection": "498",
+    "ipcTitle": "Enticing or taking away or detaining with criminal intent a married woman",
+    "bnsSection": "84",
+    "bnsTitle": "ENTICING OR TAKING AWAY OR DETAINING WITH CRIMINAL INTENT A MARRIED WOMAN",
+    "changeType": "modified",
+    "notes": "Re‑drafted; deletion of phrase equating married women to chattel"
+  },
+  {
+    "ipcSection": "498A",
+    "ipcTitle": "",
+    "bnsSection": "137",
+    "bnsTitle": "",
+    "changeType": "",
+    "notes": ""
+  },
+  {
+    "ipcSection": "499",
+    "ipcTitle": "Defamation",
+    "bnsSection": "356",
+    "bnsTitle": "Defamation",
+    "changeType": "merged",
+    "notes": "IPC Section 499 (Defamation) merged into BNS Section 356 (Defamation)."
+  },
+  {
+    "ipcSection": "500",
+    "ipcTitle": "Punishment for defamation",
+    "bnsSection": "356",
+    "bnsTitle": "Defamation",
+    "changeType": "merged",
+    "notes": "BNS Section 356 consolidates IPC Sections 499‑502; includes the punishment originally in IPC Section 500."
+  },
+  {
+    "ipcSection": "501",
+    "ipcTitle": "Printing or engraving matter known to be defamatory",
+    "bnsSection": "356",
+    "bnsTitle": "Defamation",
+    "changeType": "merged",
+    "notes": "BNS Section 356 merges the offence of printing or engraving defamatory matter (IPC 501) into its framework."
+  },
+  {
+    "ipcSection": "502",
+    "ipcTitle": "Sale of printed or engraved substance containing defamatory matter",
+    "bnsSection": "356",
+    "bnsTitle": "Defamation",
+    "changeType": "merged",
+    "notes": "BNS Section 356 merges the offence of selling defamatory printed material (IPC 502) into its framework."
+  },
+  {
+    "ipcSection": "503",
+    "ipcTitle": "Punishment for forging any valuable security",
+    "bnsSection": "351",
+    "bnsTitle": "Criminal Intimidation",
+    "changeType": "modified",
+    "notes": "Term ‘by any means’ added to include electronic means."
+  },
+  {
+    "ipcSection": "504",
+    "ipcTitle": "Intentional insult with intent to provoke breach of peace",
+    "bnsSection": "352",
+    "bnsTitle": "Intentional insult with intent to provoke breach of peace",
+    "changeType": "modified",
+    "notes": "Term ‘in any manner’ added to include electronic means."
+  },
+  {
+    "ipcSection": "505",
+    "ipcTitle": "Statements conducing to public mischief",
+    "bnsSection": "353",
+    "bnsTitle": "Statements conducing to public mischief",
+    "changeType": "modified",
+    "notes": "Terms ‘false information’ and ‘electronic means’ added to expand scope."
+  },
+  {
+    "ipcSection": "508",
+    "ipcTitle": "Defamation of a deceased person",
+    "bnsSection": "356",
+    "bnsTitle": "Defamation",
+    "changeType": "merged",
+    "notes": "IPC Section 508 (Defamation of a deceased person) merged into BNS Section 356 (Defamation)."
+  },
+  {
+    "ipcSection": "509",
+    "ipcTitle": "Word, gesture or act intended to insult the modesty of a woman",
+    "bnsSection": "79",
+    "bnsTitle": "WORD, GESTURE OR ACT INTENDED TO INSULT MODESTY OF A WOMAN",
+    "changeType": "modified",
+    "notes": "Scope broadened to include ‘exhibits any object in any form’"
+  },
+  {
+    "ipcSection": "510",
+    "ipcTitle": "Defamation of a corporation",
+    "bnsSection": "356",
+    "bnsTitle": "Defamation",
+    "changeType": "merged",
+    "notes": "IPC Section 510 (Defamation of a corporation) merged into BNS Section 356 (Defamation)."
+  },
+  {
+    "ipcSection": "511",
+    "ipcTitle": "",
+    "bnsSection": "62",
+    "bnsTitle": "Punishment for attempting to commit offences",
+    "changeType": "renamed",
+    "notes": "Section 62 of BNS corresponds to IPC section 511 on attempt."
+  }
+]

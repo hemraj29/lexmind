@@ -49,6 +49,7 @@ interface RawSection {
   chapterNumber?: number;
   exceptions?: string[];
   explanation?: string;
+  summary?: string;
 }
 
 async function embedText(text: string): Promise<number[]> {
@@ -89,10 +90,11 @@ async function ingestAct(actCode: ActType, fileName: string) {
     return;
   }
 
-  // Prepare embedding texts
+  // Prepare embedding texts — use summary + title + ingredients for better vector search
+  // (full description is too long and noisy for embeddings)
   const embeddingTexts = sections.map(
     (s) =>
-      `${actCode} Section ${s.sectionNumber} ${s.title}. ${s.description}. Ingredients: ${s.ingredients.join(", ")}. Punishment: ${s.punishment}`
+      `${actCode} Section ${s.sectionNumber} ${s.title}. ${s.summary || s.description.slice(0, 500)}. Ingredients: ${s.ingredients.join(", ")}. Punishment: ${s.punishment}. Keywords: ${(s.keywords || []).join(", ")}`
   );
 
   console.log("  Generating embeddings...");
@@ -117,6 +119,7 @@ async function ingestAct(actCode: ActType, fileName: string) {
       update: {
         title: s.title,
         description: s.description,
+        summary: s.summary || null,
         offenceType,
         bailable: s.bailable,
         punishment: s.punishment,
@@ -132,6 +135,7 @@ async function ingestAct(actCode: ActType, fileName: string) {
         sectionNumber: s.sectionNumber,
         title: s.title,
         description: s.description,
+        summary: s.summary || null,
         offenceType,
         bailable: s.bailable,
         punishment: s.punishment,

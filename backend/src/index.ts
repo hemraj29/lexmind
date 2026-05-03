@@ -12,6 +12,7 @@ import { createChildLogger } from "./utils/logger.js";
 import healthRoutes from "./routes/health.routes.js";
 import pipelineRoutes from "./routes/pipeline.routes.js";
 import sectionsRoutes from "./routes/sections.routes.js";
+import chatRoutes from "./routes/chat.routes.js";
 
 const log = createChildLogger("server");
 
@@ -42,7 +43,8 @@ async function bootstrap(): Promise<void> {
 
   // ─── ROUTES ───────────────────────────────────────────
   app.use("/api", healthRoutes);
-  app.use("/api/pipeline", pipelineRoutes);
+  app.use("/api/cases", chatRoutes);         // Chat-first case management
+  app.use("/api/pipeline", pipelineRoutes);  // Legacy standalone pipeline
   app.use("/api/sections", sectionsRoutes);
 
   // Static serve for generated documents

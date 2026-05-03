@@ -9,15 +9,101 @@ datasource db {
   extensions = [vector]
 }
 
+// ─── CASES (Central entity — each case IS a chat thread) ──
+
+model Case {
+  id            String     @id @default(cuid())
+  title         String                          // "State vs. Rajesh Kumar" (auto-generated or user-set)
+  caseNumber    String?    @map("case_number")  // Court case number if assigned
+  clientName    String?    @map("client_name")
+  court         String?
+  district      String?
+  state         String?
+  status        CaseStatus @default(ACTIVE)
+  summary       String?                          // AI-generated, updated on new docs
+  sectionsRaw   String[]   @map("sections_raw")  // Aggregated from all docs
+  tags          String[]   @default([])
+
+  // Relations
+  messages      ChatMessage[]
+  documents     CaseDocument[]
+  pipelineRuns  PipelineRun[]
+  generatedDocs GeneratedDocument[]
+
+  createdAt     DateTime   @default(now()) @map("created_at")
+  updatedAt     DateTime   @updatedAt @map("updated_at")
+
+  @@index([status])
+  @@index([createdAt(sort: Desc)])
+  @@map("cases")
+}
+
+// ─── CHAT MESSAGES (The chat IS the case history) ─────────
+
+model ChatMessage {
+  id            String      @id @default(cuid())
+  caseId        String      @map("case_id")
+  case          Case        @relation(fields: [caseId], references: [id], onDelete: Cascade)
+
+  role          MessageRole
+  type          MessageType
+  content       String       // Text content or card JSON
+
+  // File attachment (if type = FILE_UPLOAD)
+  documentId    String?      @map("document_id")
+  document      CaseDocument? @relation(fields: [documentId], references: [id])
+
+  // Generation run (if type = COMMAND that triggers generation)
+  pipelineRunId String?      @map("pipeline_run_id")
+  pipelineRun   PipelineRun? @relation(fields: [pipelineRunId], references: [id])
+
+  // AI metadata (sources cited, sections referenced)
+  metadata      Json?
+
+  createdAt     DateTime     @default(now()) @map("created_at")
+
+  @@index([caseId, createdAt])
+  @@map("chat_messages")
+}
+
+// ─── CASE DOCUMENTS (Uploads linked to a case) ───────────
+
+model CaseDocument {
+  id            String           @id @default(cuid())
+  caseId        String           @map("case_id")
+  case          Case             @relation(fields: [caseId], references: [id], onDelete: Cascade)
+  docType       CaseDocumentType @map("doc_type")
+  fileName      String           @map("file_name")
+  mimeType      String           @map("mime_type")
+  filePath      String           @map("file_path")
+  fileSize      Int              @map("file_size")
+
+  // AI-extracted structured data (JSONB — shape depends on docType)
+  extractedData Json?            @map("extracted_data")
+  rawText       String?          @map("raw_text")
+  confidence    Float?
+
+  // Relations
+  chatMessages  ChatMessage[]
+  pipelineRuns  PipelineRun[]
+
+  createdAt     DateTime         @default(now()) @map("created_at")
+  updatedAt     DateTime         @updatedAt @map("updated_at")
+
+  @@index([caseId])
+  @@index([docType])
+  @@map("case_documents")
+}
+
 // ─── ACTS (Parent table for all legislation) ──────────────
 
 model Act {
   id          String   @id @default(cuid())
-  code        ActType  @unique          // BNS, BNSS, BSA
-  fullName    String   @map("full_name") // "Bhartiya Nyaya Sanhita"
-  year        Int                        // 2023
+  code        ActType  @unique
+  fullName    String   @map("full_name")
+  year        Int
   description String?
-  replacedAct String?  @map("replaced_act") // "Indian Penal Code"
+  replacedAct String?  @map("replaced_act")
 
   sections    StatuteSection[]
   chapters    Chapter[]
@@ -28,7 +114,7 @@ model Act {
   @@map("acts")
 }
 
-// ─── CHAPTERS (Group sections under chapters) ────────────
+// ─── CHAPTERS ─────────────────────────────────────────────
 
 model Chapter {
   id          String   @id @default(cuid())
@@ -47,7 +133,7 @@ model Chapter {
   @@map("chapters")
 }
 
-// ─── STATUTE SECTIONS ────────────────────────────────────
+// ─── STATUTE SECTIONS ─────────────────────────────────────
 
 model StatuteSection {
   id            String      @id @default(cuid())
@@ -58,23 +144,22 @@ model StatuteSection {
   chapter       Chapter?    @relation(fields: [chapterId], references: [id])
   sectionNumber String      @map("section_number")
   title         String
-  description   String
+  description   String                          // Full legal text from the Act
+  summary       String?                         // 2-3 line plain English summary
   offenceType   OffenceType @map("offence_type")
   bailable      Boolean
   compoundable  Boolean     @default(false)
   punishment    String
   minPunishment String?     @map("min_punishment")
   maxPunishment String?     @map("max_punishment")
-  ingredients   String[]    // Elements prosecution must prove
+  ingredients   String[]
   keywords      String[]
   exceptions    String[]    @default([])
-  explanation   String?     // Legal explanation/illustrations
+  explanation   String?
 
-  // Relations
   ipcMappingsAsBNS IPCMapping[]  @relation("BNSSection")
   precedentLinks   PrecedentSection[]
 
-  // pgvector embedding (1536 dim for text-embedding-3-small)
   embedding     Unsupported("vector(1536)")?
 
   createdAt     DateTime @default(now()) @map("created_at")
@@ -88,16 +173,16 @@ model StatuteSection {
   @@map("statute_sections")
 }
 
-// ─── IPC TO BNS MAPPING ────────────────────────────────
+// ─── IPC TO BNS MAPPING ──────────────────────────────────
 
 model IPCMapping {
-  id              String   @id @default(cuid())
-  ipcSection      String   @unique @map("ipc_section")
-  ipcTitle        String   @map("ipc_title")
-  bnsSection      String   @map("bns_section")
-  bnsTitle        String   @map("bns_title")
-  bnsSectionId    String?  @map("bns_section_id")
-  bnsSectionRef   StatuteSection? @relation("BNSSection", fields: [bnsSectionId], references: [id])
+  id              String            @id @default(cuid())
+  ipcSection      String            @unique @map("ipc_section")
+  ipcTitle        String            @map("ipc_title")
+  bnsSection      String            @map("bns_section")
+  bnsTitle        String            @map("bns_title")
+  bnsSectionId    String?           @map("bns_section_id")
+  bnsSectionRef   StatuteSection?   @relation("BNSSection", fields: [bnsSectionId], references: [id])
   changeType      MappingChangeType @default(RENAMED) @map("change_type")
   notes           String?
 
@@ -108,25 +193,23 @@ model IPCMapping {
   @@map("ipc_mappings")
 }
 
-// ─── CASE PRECEDENTS ───────────────────────────────────
+// ─── CASE PRECEDENTS ──────────────────────────────────────
 
 model Precedent {
   id               String   @id @default(cuid())
   caseTitle        String   @map("case_title")
   citation         String   @unique
   court            String
-  bench            String?              // Judge names
+  bench            String?
   year             Int
-  ratio            String               // Key legal principle
+  ratio            String
   summary          String
-  headnotes        String?              // Brief headnotes
+  headnotes        String?
   tags             String[]
   bailRelevant     Boolean  @default(false) @map("bail_relevant")
 
-  // Relations
   sectionLinks     PrecedentSection[]
 
-  // pgvector embedding
   embedding        Unsupported("vector(1536)")?
 
   createdAt        DateTime @default(now()) @map("created_at")
@@ -138,7 +221,7 @@ model Precedent {
   @@map("precedents")
 }
 
-// ─── JOIN TABLE: Precedent <-> StatuteSection ──────────
+// ─── JOIN TABLE: Precedent <-> StatuteSection ─────────────
 
 model PrecedentSection {
   id          String         @id @default(cuid())
@@ -146,65 +229,76 @@ model PrecedentSection {
   precedent   Precedent      @relation(fields: [precedentId], references: [id], onDelete: Cascade)
   sectionId   String         @map("section_id")
   section     StatuteSection @relation(fields: [sectionId], references: [id], onDelete: Cascade)
-  relevance   String?        // Why this precedent is relevant to this section
+  relevance   String?
 
   @@unique([precedentId, sectionId])
   @@map("precedent_sections")
 }
 
-// ─── PIPELINE RUNS ─────────────────────────────────────
+// ─── PIPELINE RUNS ────────────────────────────────────────
 
 model PipelineRun {
-  id              String      @id @default(cuid())
-  status          RunStatus   @default(PENDING)
-  fileName        String      @map("file_name")
-  mimeType        String      @map("mime_type")
-  uploadPath      String      @map("upload_path")
+  id              String             @id @default(cuid())
+  caseId          String?            @map("case_id")
+  case            Case?              @relation(fields: [caseId], references: [id])
+  documentId      String?            @map("document_id")
+  document        CaseDocument?      @relation(fields: [documentId], references: [id])
+  generationType  GenerationDocType? @map("generation_type")
 
-  // Extracted FIR data (JSONB)
-  extractedFIR    Json?       @map("extracted_fir")
+  status          RunStatus          @default(PENDING)
+  fileName        String             @map("file_name")
+  mimeType        String             @map("mime_type")
+  uploadPath      String             @map("upload_path")
+
+  // Extracted data (JSONB — shape depends on doc type)
+  extractedData   Json?              @map("extracted_data")
 
   // Legal research memo (JSONB)
-  legalMemo       Json?       @map("legal_memo")
+  legalMemo       Json?              @map("legal_memo")
 
   // Draft output
-  draftMarkdown   String?     @map("draft_markdown")
-  docxPath        String?     @map("docx_path")
+  draftMarkdown   String?            @map("draft_markdown")
+  docxPath        String?            @map("docx_path")
 
   // Pipeline tracking
-  steps           Json[]      @default([])
-  currentStep     String?     @map("current_step")
-  totalDurationMs Int?        @map("total_duration_ms")
+  steps           Json[]             @default([])
+  currentStep     String?            @map("current_step")
+  totalDurationMs Int?               @map("total_duration_ms")
   error           String?
 
-  // Relation to generated documents
+  // Relations
   documents       GeneratedDocument[]
+  chatMessages    ChatMessage[]
 
-  createdAt       DateTime    @default(now()) @map("created_at")
-  updatedAt       DateTime    @updatedAt @map("updated_at")
+  createdAt       DateTime           @default(now()) @map("created_at")
+  updatedAt       DateTime           @updatedAt @map("updated_at")
 
   @@index([status])
+  @@index([caseId])
   @@index([createdAt(sort: Desc)])
   @@map("pipeline_runs")
 }
 
-// ─── GENERATED DOCUMENTS ───────────────────────────────
+// ─── GENERATED DOCUMENTS ──────────────────────────────────
 
 model GeneratedDocument {
-  id            String       @id @default(cuid())
-  pipelineRunId String       @map("pipeline_run_id")
-  pipelineRun   PipelineRun  @relation(fields: [pipelineRunId], references: [id], onDelete: Cascade)
-  docType       DocumentType @map("doc_type")
-  filePath      String       @map("file_path")
-  fileSize      Int          @map("file_size")
-  mimeType      String       @map("mime_type")
+  id            String            @id @default(cuid())
+  pipelineRunId String            @map("pipeline_run_id")
+  pipelineRun   PipelineRun       @relation(fields: [pipelineRunId], references: [id], onDelete: Cascade)
+  caseId        String?           @map("case_id")
+  case          Case?             @relation(fields: [caseId], references: [id])
+  docType       GenerationDocType @map("doc_type")
+  filePath      String            @map("file_path")
+  fileSize      Int               @map("file_size")
+  mimeType      String            @map("mime_type")
 
-  createdAt     DateTime     @default(now()) @map("created_at")
+  createdAt     DateTime          @default(now()) @map("created_at")
 
+  @@index([caseId])
   @@map("generated_documents")
 }
 
-// ─── ENUMS ─────────────────────────────────────────────
+// ─── ENUMS ────────────────────────────────────────────────
 
 enum ActType {
   BNS
@@ -225,16 +319,50 @@ enum RunStatus {
 }
 
 enum MappingChangeType {
-  RENAMED     @map("renamed")     // Same offence, new number
-  MODIFIED    @map("modified")    // Changed elements/punishment
-  MERGED      @map("merged")      // Multiple IPC sections merged into one BNS
-  SPLIT       @map("split")       // One IPC section split into multiple BNS
-  NEW         @map("new")         // No IPC equivalent
-  REPEALED    @map("repealed")    // IPC section removed, no BNS equivalent
+  RENAMED     @map("renamed")
+  MODIFIED    @map("modified")
+  MERGED      @map("merged")
+  SPLIT       @map("split")
+  NEW         @map("new")
+  REPEALED    @map("repealed")
 }
 
-enum DocumentType {
-  BAIL_APPLICATION    @map("bail_application")
-  LEGAL_MEMO          @map("legal_memo")
-  FIR_EXTRACT         @map("fir_extract")
+enum CaseStatus {
+  ACTIVE   @map("active")
+  CLOSED   @map("closed")
+  ARCHIVED @map("archived")
+}
+
+enum CaseDocumentType {
+  FIR                @map("fir")
+  CHARGESHEET        @map("chargesheet")
+  COURT_ORDER        @map("court_order")
+  WITNESS_STATEMENT  @map("witness_statement")
+  EVIDENCE           @map("evidence")
+  PREVIOUS_PETITION  @map("previous_petition")
+  OTHER              @map("other")
+}
+
+enum GenerationDocType {
+  REGULAR_BAIL          @map("regular_bail")
+  ANTICIPATORY_BAIL     @map("anticipatory_bail")
+  DEFAULT_BAIL          @map("default_bail")
+  QUASHING_PETITION     @map("quashing_petition")
+  DISCHARGE_APPLICATION @map("discharge_application")
+  CRIMINAL_APPEAL       @map("criminal_appeal")
+  LEGAL_MEMO            @map("legal_memo")
+}
+
+enum MessageRole {
+  USER       @map("user")
+  ASSISTANT  @map("assistant")
+  SYSTEM     @map("system")
+}
+
+enum MessageType {
+  TEXT             @map("text")
+  FILE_UPLOAD      @map("file_upload")
+  COMMAND          @map("command")
+  ANALYSIS_CARD    @map("analysis_card")
+  GENERATION_CARD  @map("generation_card")
 }

@@ -5,7 +5,24 @@ const router = createRouter({
   routes: [
     {
       path: "/",
-      name: "home",
+      name: "chat",
+      component: () => import("@/views/ChatView.vue"),
+    },
+    {
+      path: "/case/:id",
+      name: "case-chat",
+      component: () => import("@/views/ChatView.vue"),
+      props: true,
+    },
+    {
+      path: "/sections",
+      name: "sections",
+      component: () => import("@/views/SectionsView.vue"),
+    },
+    // Legacy routes (keep for backward compat)
+    {
+      path: "/legacy",
+      name: "legacy-home",
       component: () => import("@/views/HomeView.vue"),
     },
     {
@@ -24,11 +41,6 @@ const router = createRouter({
       path: "/history",
       name: "history",
       component: () => import("@/views/HistoryView.vue"),
-    },
-    {
-      path: "/sections",
-      name: "sections",
-      component: () => import("@/views/SectionsView.vue"),
     },
   ],
 });
