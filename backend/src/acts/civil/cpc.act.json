@@ -1,0 +1,11 @@
+{
+  "code": "CPC",
+  "name": "Code of Civil Procedure, 1908",
+  "shortName": "CPC",
+  "year": 1908,
+  "domainCode": "civil",
+  "isCentralAct": true,
+  "description": "Procedural law governing civil suits in India",
+  "sourceUrl": "https://www.indiacode.nic.in/handle/123456789/2191",
+  "searchPriority": 100
+}

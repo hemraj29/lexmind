@@ -1,0 +1,11 @@
+{
+  "code": "SPECIFIC_RELIEF_1963",
+  "name": "Specific Relief Act, 1963",
+  "shortName": "Specific Relief Act",
+  "year": 1963,
+  "domainCode": "civil",
+  "isCentralAct": true,
+  "description": "Provides remedies for breach of contract, including specific performance and injunctions",
+  "sourceUrl": "https://www.indiacode.nic.in/handle/123456789/1571",
+  "searchPriority": 80
+}

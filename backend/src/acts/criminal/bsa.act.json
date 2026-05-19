@@ -1,0 +1,12 @@
+{
+  "code": "BSA",
+  "name": "Bharatiya Sakshya Adhiniyam, 2023",
+  "shortName": "BSA",
+  "year": 2023,
+  "domainCode": "criminal",
+  "isCentralAct": true,
+  "description": "Replaced the Indian Evidence Act with effect from 1st July 2024",
+  "sourcePdfPath": "book/250882_english_01042024_0.pdf",
+  "sourceUrl": "https://www.indiacode.nic.in/handle/123456789/19945",
+  "searchPriority": 100
+}

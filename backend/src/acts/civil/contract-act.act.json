@@ -1,0 +1,11 @@
+  {
+  "code": "CONTRACT_1872",
+  "name": "Indian Contract Act, 1872",
+  "shortName": "Contract Act",
+  "year": 1872,
+  "domainCode": "civil",
+  "isCentralAct": true,
+  "description": "Governs formation, performance, and breach of contracts",
+  "sourceUrl": "https://www.indiacode.nic.in/handle/123456789/2187",
+  "searchPriority": 90
+}

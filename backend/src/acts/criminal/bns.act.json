@@ -1,0 +1,12 @@
+{
+  "code": "BNS",
+  "name": "Bharatiya Nyaya Sanhita, 2023",
+  "shortName": "BNS",
+  "year": 2023,
+  "domainCode": "criminal",
+  "isCentralAct": true,
+  "description": "Replaced the Indian Penal Code (IPC) with effect from 1st July 2024",
+  "sourcePdfPath": "book/250883_english_01042024.pdf",
+  "sourceUrl": "https://www.indiacode.nic.in/handle/123456789/19938",
+  "searchPriority": 100
+}

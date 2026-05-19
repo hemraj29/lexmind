@@ -60,6 +60,9 @@ model ChatMessage {
   // AI metadata (sources cited, sections referenced)
   metadata      Json?
 
+  // Citations attached to this message
+  citations     Citation[]
+
   createdAt     DateTime     @default(now()) @map("created_at")
 
   @@index([caseId, createdAt])
@@ -83,9 +86,14 @@ model CaseDocument {
   rawText       String?          @map("raw_text")
   confidence    Float?
 
+  // Whether the user has the source enabled in the chat context
+  enabled       Boolean          @default(true)
+  title         String?
+
   // Relations
   chatMessages  ChatMessage[]
   pipelineRuns  PipelineRun[]
+  citations     Citation[]
 
   createdAt     DateTime         @default(now()) @map("created_at")
   updatedAt     DateTime         @updatedAt @map("updated_at")
@@ -159,6 +167,9 @@ model StatuteSection {
 
   ipcMappingsAsBNS IPCMapping[]  @relation("BNSSection")
   precedentLinks   PrecedentSection[]
+  citations        Citation[]
+  outgoingRelations SectionRelation[] @relation("FromSection")
+  incomingRelations SectionRelation[] @relation("ToSection")
 
   embedding     Unsupported("vector(1536)")?
 
@@ -209,6 +220,7 @@ model Precedent {
   bailRelevant     Boolean  @default(false) @map("bail_relevant")
 
   sectionLinks     PrecedentSection[]
+  citations        Citation[]
 
   embedding        Unsupported("vector(1536)")?
 
@@ -269,6 +281,7 @@ model PipelineRun {
   // Relations
   documents       GeneratedDocument[]
   chatMessages    ChatMessage[]
+  citations       Citation[]
 
   createdAt       DateTime           @default(now()) @map("created_at")
   updatedAt       DateTime           @updatedAt @map("updated_at")
@@ -351,6 +364,200 @@ enum GenerationDocType {
   DISCHARGE_APPLICATION @map("discharge_application")
   CRIMINAL_APPEAL       @map("criminal_appeal")
   LEGAL_MEMO            @map("legal_memo")
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+//  PLUGIN ARCHITECTURE — domain/act/document type registry (DB-driven)
+//  These tables make adding new Acts/domains a config change, not code.
+// ═══════════════════════════════════════════════════════════════════════
+
+model LegalDomain {
+  id            String   @id @default(cuid())
+  code          String   @unique           // "criminal", "civil", "tax", "family"
+  name          String                     // "Criminal Law"
+  description   String?
+  iconName      String?  @map("icon_name")
+  colorHex      String?  @map("color_hex")
+  sortOrder     Int      @default(0) @map("sort_order")
+  enabled       Boolean  @default(true)
+
+  documentTypes RegisteredDocumentType[]
+  studioActions StudioAction[]
+  chatCommands  ChatCommand[]
+
+  createdAt     DateTime @default(now()) @map("created_at")
+  updatedAt     DateTime @updatedAt @map("updated_at")
+
+  @@map("legal_domains")
+}
+
+model RegisteredDocumentType {
+  id                  String       @id @default(cuid())
+  code                String       @unique  // "regular_bail", "plaint", "moa"
+  name                String
+  description         String?
+
+  domainId            String       @map("domain_id")
+  domain              LegalDomain  @relation(fields: [domainId], references: [id], onDelete: Cascade)
+
+  category            String       @default("draft")  // "draft" | "analyze" | "research" | "extract"
+  iconName            String?      @map("icon_name")
+  colorHex            String?      @map("color_hex")
+
+  requiredSourceTypes String[]     @default([]) @map("required_source_types")
+  primarySectionCodes String[]     @default([]) @map("primary_section_codes")
+  drafterPluginId     String?      @map("drafter_plugin_id")
+  templateConfig      Json         @default("{}") @map("template_config")
+
+  command             String?      @unique  // "@bail"
+  enabled             Boolean      @default(true)
+  sortOrder           Int          @default(0) @map("sort_order")
+  usageCount          Int          @default(0) @map("usage_count")
+
+  createdAt           DateTime     @default(now()) @map("created_at")
+  updatedAt           DateTime     @updatedAt @map("updated_at")
+
+  @@index([domainId])
+  @@map("registered_document_types")
+}
+
+model StudioAction {
+  id                  String       @id @default(cuid())
+  code                String       @unique
+  label               String
+  description         String?
+  iconName            String       @map("icon_name")
+  colorHex            String?      @map("color_hex")
+  category            String       @default("draft")
+  command             String?
+
+  domainId            String       @map("domain_id")
+  domain              LegalDomain  @relation(fields: [domainId], references: [id], onDelete: Cascade)
+
+  requiredSourceTypes String[]     @default([]) @map("required_source_types")
+  enabled             Boolean      @default(true)
+  sortOrder           Int          @default(0) @map("sort_order")
+
+  createdAt           DateTime     @default(now()) @map("created_at")
+  updatedAt           DateTime     @updatedAt @map("updated_at")
+
+  @@index([domainId])
+  @@map("studio_actions")
+}
+
+model ChatCommand {
+  id            String       @id @default(cuid())
+  cmd           String       @unique  // "@bail"
+  label         String
+  description   String
+  color         String?
+
+  domainId      String?      @map("domain_id")
+  domain        LegalDomain? @relation(fields: [domainId], references: [id], onDelete: SetNull)
+
+  documentTypeCode String?    @map("document_type_code")
+  enabled       Boolean      @default(true)
+  sortOrder     Int          @default(0) @map("sort_order")
+
+  createdAt     DateTime     @default(now()) @map("created_at")
+  updatedAt     DateTime     @updatedAt @map("updated_at")
+
+  @@map("chat_commands")
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+//  CITATION SYSTEM — every claim → traceable source
+// ═══════════════════════════════════════════════════════════════════════
+
+model Citation {
+  id            String              @id @default(cuid())
+
+  messageId     String?             @map("message_id")
+  message       ChatMessage?        @relation(fields: [messageId], references: [id], onDelete: Cascade)
+
+  pipelineRunId String?             @map("pipeline_run_id")
+  pipelineRun   PipelineRun?        @relation(fields: [pipelineRunId], references: [id], onDelete: Cascade)
+
+  sourceType    CitationSourceType  @map("source_type")
+
+  // For statute sections
+  sectionId     String?             @map("section_id")
+  section       StatuteSection?     @relation(fields: [sectionId], references: [id], onDelete: SetNull)
+  pageNumber    Int?                @map("page_number")
+  paragraphRef  String?             @map("paragraph_ref")
+
+  // For precedents
+  precedentId   String?             @map("precedent_id")
+  precedent     Precedent?          @relation(fields: [precedentId], references: [id], onDelete: SetNull)
+  sccReference  String?             @map("scc_reference")
+  passageStart  Int?                @map("passage_start")
+  passageEnd    Int?                @map("passage_end")
+
+  // For uploaded documents
+  documentId    String?             @map("document_id")
+  document      CaseDocument?       @relation(fields: [documentId], references: [id], onDelete: SetNull)
+  documentPage  Int?                @map("document_page")
+
+  // For web sources
+  webUrl        String?             @map("web_url")
+  webTitle      String?             @map("web_title")
+
+  excerptText   String              @map("excerpt_text")
+  fullSourceUrl String?             @map("full_source_url")
+
+  createdAt     DateTime            @default(now()) @map("created_at")
+
+  @@index([messageId])
+  @@index([sectionId])
+  @@index([precedentId])
+  @@index([documentId])
+  @@map("citations")
+}
+
+enum CitationSourceType {
+  SECTION    @map("section")
+  PRECEDENT  @map("precedent")
+  DOCUMENT   @map("document")
+  WEB        @map("web")
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+//  KNOWLEDGE GRAPH — section relationships
+// ═══════════════════════════════════════════════════════════════════════
+
+model SectionRelation {
+  id            String         @id @default(cuid())
+  fromSectionId String         @map("from_section_id")
+  fromSection   StatuteSection @relation("FromSection", fields: [fromSectionId], references: [id], onDelete: Cascade)
+  toSectionId   String         @map("to_section_id")
+  toSection     StatuteSection @relation("ToSection", fields: [toSectionId], references: [id], onDelete: Cascade)
+  relationType  String         @map("relation_type")  // "punishes", "exception_to", "variant_of", etc.
+  confidence    Float          @default(1.0)
+  notes         String?
+
+  createdAt     DateTime       @default(now()) @map("created_at")
+
+  @@unique([fromSectionId, toSectionId, relationType])
+  @@index([fromSectionId])
+  @@index([toSectionId])
+  @@map("section_relations")
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+//  CACHED EXTERNAL SEARCH RESULTS (Indian Kanoon, SCC, etc.)
+// ═══════════════════════════════════════════════════════════════════════
+
+model CitationCache {
+  id           String   @id @default(cuid())
+  queryHash    String   @unique @map("query_hash")
+  providerId   String   @map("provider_id")
+  candidates   Json
+  expiresAt    DateTime @map("expires_at")
+  createdAt    DateTime @default(now()) @map("created_at")
+
+  @@index([providerId])
+  @@index([expiresAt])
+  @@map("citation_cache")
 }
 
 enum MessageRole {

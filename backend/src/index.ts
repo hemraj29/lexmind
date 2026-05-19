@@ -7,12 +7,17 @@ import { initDatabase, disconnectDatabase } from "./services/database.service.js
 import { storageService } from "./services/storage.service.js";
 import { errorHandler, notFoundHandler } from "./middleware/error-handler.js";
 import { createChildLogger } from "./utils/logger.js";
+import { bootstrapPlugins } from "./core/bootstrap.js";
 
 // Routes
 import healthRoutes from "./routes/health.routes.js";
 import pipelineRoutes from "./routes/pipeline.routes.js";
 import sectionsRoutes from "./routes/sections.routes.js";
 import chatRoutes from "./routes/chat.routes.js";
+import sourcesRoutes from "./routes/sources.routes.js";
+import studioRoutes from "./routes/studio.routes.js";
+import commandsRoutes from "./routes/commands.routes.js";
+import citationsRoutes from "./routes/citations.routes.js";
 
 const log = createChildLogger("server");
 
@@ -39,12 +44,17 @@ async function bootstrap(): Promise<void> {
   // ─── INITIALIZE SERVICES ──────────────────────────────
   await initDatabase();
   await storageService.init();
+  await bootstrapPlugins();           // ← auto-discover all domain/drafter plugins from filesystem + sync to DB
   log.info("All services initialized");
 
   // ─── ROUTES ───────────────────────────────────────────
   app.use("/api", healthRoutes);
-  app.use("/api/cases", chatRoutes);         // Chat-first case management
-  app.use("/api/pipeline", pipelineRoutes);  // Legacy standalone pipeline
+  app.use("/api/cases", sourcesRoutes);        // /api/cases/:id/sources/* (mounted FIRST so it takes precedence)
+  app.use("/api/cases", chatRoutes);           // /api/cases + /api/cases/:id/messages
+  app.use("/api/studio-actions", studioRoutes);
+  app.use("/api/commands", commandsRoutes);
+  app.use("/api/citations", citationsRoutes);
+  app.use("/api/pipeline", pipelineRoutes);    // Legacy standalone pipeline
   app.use("/api/sections", sectionsRoutes);
 
   // Static serve for generated documents
