@@ -99,17 +99,26 @@ router.post("/:id/messages", upload.single("file"), async (req: Request, res: Re
     const error = err instanceof Error ? err : new Error(String(err));
     log.error({ caseId, error: error.message }, "Message handling failed");
 
-    // Save error as assistant message
-    await prisma.chatMessage.create({
-      data: {
-        caseId,
-        role: "ASSISTANT",
-        type: "TEXT",
-        content: `Something went wrong: ${error.message}. Please try again.`,
-      },
-    });
+    // Save error as assistant message so the user sees the error in chat
+    try {
+      await prisma.chatMessage.create({
+        data: {
+          caseId,
+          role: "ASSISTANT",
+          type: "TEXT",
+          content: `⚠️ Something went wrong: ${error.message.slice(0, 200)}. Please check server logs.`,
+        },
+      });
+    } catch (saveErr) {
+      log.error({ saveErr }, "Failed to save error message");
+    }
 
-    throw new AppError(error.message, 500);
+    // Return error to client WITHOUT throwing (prevents process crash)
+    res.status(500).json({
+      success: false,
+      error: error.message,
+      timestamp: new Date().toISOString(),
+    } satisfies ApiResponse);
   }
 });
 

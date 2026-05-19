@@ -62,11 +62,11 @@ class HybridSearchService {
       return matches.map((m) => ({
         section: {
           id: m.id,
-          act: m.act as StatuteSection["act"],
-          sectionNumber: m.sectionNumber,
+          act: m.act_type as StatuteSection["act"],
+          sectionNumber: m.section_number,
           title: m.title,
           description: m.description,
-          offenceType: m.offenceType as StatuteSection["offenceType"],
+          offenceType: m.offence_type as StatuteSection["offenceType"],
           bailable: m.bailable,
           punishment: m.punishment,
           ingredients: m.ingredients,
@@ -116,7 +116,7 @@ class HybridSearchService {
           results.push({
             section: {
               id: found.id,
-              act: found.act as StatuteSection["act"],
+              act: found.actType as StatuteSection["act"],
               sectionNumber: found.sectionNumber,
               title: found.title,
               description: found.description,

@@ -16,6 +16,9 @@ frontend/dist/
 # Prisma
 backend/prisma/migrations/
 
+# Downloaded assets
+downloads/
+
 # OS
 .DS_Store
 Thumbs.db

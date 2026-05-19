@@ -165,6 +165,11 @@ model StatuteSection {
   exceptions    String[]    @default([])
   explanation   String?
 
+  // Source traceability (used by citation preview UI)
+  pageNumber       Int?     @map("page_number")
+  sourceFile       String?  @map("source_file")
+  sourceReference  String?  @map("source_reference")
+
   ipcMappingsAsBNS IPCMapping[]  @relation("BNSSection")
   precedentLinks   PrecedentSection[]
   citations        Citation[]
@@ -357,13 +362,20 @@ enum CaseDocumentType {
 }
 
 enum GenerationDocType {
+  // Criminal
   REGULAR_BAIL          @map("regular_bail")
   ANTICIPATORY_BAIL     @map("anticipatory_bail")
   DEFAULT_BAIL          @map("default_bail")
   QUASHING_PETITION     @map("quashing_petition")
   DISCHARGE_APPLICATION @map("discharge_application")
   CRIMINAL_APPEAL       @map("criminal_appeal")
+  // Civil
+  PLAINT                @map("plaint")
+  WRITTEN_STATEMENT     @map("written_statement")
+  TEMPORARY_INJUNCTION  @map("temporary_injunction")
+  // Generic
   LEGAL_MEMO            @map("legal_memo")
+  OTHER                 @map("other")
 }
 
 // ═══════════════════════════════════════════════════════════════════════

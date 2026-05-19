@@ -15,6 +15,27 @@ import type { LegalMemo } from "../types/legal.types.js";
 
 const log = createChildLogger("chat-service");
 
+// Safely map any string → GenerationDocType enum, falling back to OTHER.
+// Keeps civil + future domain generations from blowing up if enum is missing a value.
+const KNOWN_GEN_TYPES = new Set([
+  "REGULAR_BAIL",
+  "ANTICIPATORY_BAIL",
+  "DEFAULT_BAIL",
+  "QUASHING_PETITION",
+  "DISCHARGE_APPLICATION",
+  "CRIMINAL_APPEAL",
+  "PLAINT",
+  "WRITTEN_STATEMENT",
+  "TEMPORARY_INJUNCTION",
+  "LEGAL_MEMO",
+  "OTHER",
+]);
+
+function toGenerationEnum(code: string): any {
+  const normalized = code.toUpperCase().replace(/[^A-Z_]/g, "_");
+  return (KNOWN_GEN_TYPES.has(normalized) ? normalized : "OTHER") as any;
+}
+
 export interface MessageResult {
   role: "assistant";
   type: "text" | "analysis_card" | "generation_card" | "file_upload";
@@ -275,7 +296,7 @@ async function handleCommand(caseId: string, commandType: string): Promise<Messa
   const run = await prisma.pipelineRun.create({
     data: {
       caseId,
-      generationType: genType.toUpperCase().replace(/_/g, "_") as any,
+      generationType: toGenerationEnum(genType),
       status: "COMPLETED",
       fileName,
       mimeType: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
@@ -292,7 +313,7 @@ async function handleCommand(caseId: string, commandType: string): Promise<Messa
     data: {
       pipelineRunId: run.id,
       caseId,
-      docType: genType.toUpperCase().replace(/_/g, "_") as any,
+      docType: toGenerationEnum(genType),
       filePath: docxPath,
       fileSize: result.docxBuffer.length,
       mimeType: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
@@ -331,22 +352,119 @@ async function handleChat(caseId: string, message: string): Promise<MessageResul
   log.info({ caseId }, "Handling chat message");
 
   const context = await buildCaseContext(caseId);
-  const result = await strategyAdvisorAgent.chat(message, context);
 
-  await prisma.chatMessage.create({
+  // Pull DB sections relevant to the user's question and merge into context,
+  // so the LLM grounds its answer in actual statute text (not training memory).
+  try {
+    const hits = await hybridSearchService.search({
+      query: message,
+      topK: 6,
+      includeRerank: false,
+    });
+
+    if (hits.length > 0) {
+      const existingIds = new Set(
+        context.applicableSections.map((s) => s.id).filter(Boolean) as string[]
+      );
+
+      for (const hit of hits) {
+        if (existingIds.has(hit.section.id)) continue;
+        existingIds.add(hit.section.id);
+        context.applicableSections.push({
+          id: hit.section.id,
+          act: hit.section.act,
+          sectionNumber: hit.section.sectionNumber,
+          title: hit.section.title,
+          bailable: hit.section.bailable,
+          punishment: hit.section.punishment,
+          ingredients: hit.section.ingredients,
+          description: hit.section.description,
+        });
+      }
+
+      // Cap to keep the prompt manageable
+      if (context.applicableSections.length > 10) {
+        context.applicableSections = context.applicableSections.slice(0, 10);
+      }
+
+      log.info({ added: hits.length, total: context.applicableSections.length }, "Merged DB sections into chat context");
+    }
+  } catch (err) {
+    log.warn({ err: (err as Error).message }, "Hybrid search failed in chat — continuing without DB sections");
+  }
+
+  // Allocate cite IDs for sections that have a DB id, so the LLM can reference them
+  // and we can persist matching Citation rows the frontend can preview.
+  // Use short aliases (cite_1, cite_2…) in the prompt for token brevity, then rewrite
+  // to globally-unique IDs before persisting so they don't collide across messages.
+  const citeMap: Record<string, string> = {};
+  context.applicableSections.forEach((s, idx) => {
+    if (s.id) citeMap[`cite_${idx + 1}`] = s.id;
+  });
+
+  const result = await strategyAdvisorAgent.chat(message, context, citeMap);
+
+  // Rewrite the short aliases to globally-unique IDs and persist Citation rows.
+  const citeEntries = Object.entries(citeMap);
+  let finalReply = result.reply;
+  const persistedCites: { id: string; sectionId: string }[] = [];
+
+  if (citeEntries.length > 0) {
+    const turnPrefix = Math.random().toString(36).slice(2, 10);
+    for (const [alias, sectionId] of citeEntries) {
+      const uniqueId = `${turnPrefix}_${alias}`;
+      // Rewrite [^cite_1] → [^<prefix>_cite_1] in the LLM reply
+      const aliasPattern = new RegExp(`\\[\\^${alias}\\]`, "g");
+      finalReply = finalReply.replace(aliasPattern, `[^${uniqueId}]`);
+      persistedCites.push({ id: uniqueId, sectionId });
+    }
+  }
+
+  const assistantMsg = await prisma.chatMessage.create({
     data: {
       caseId,
       role: "ASSISTANT",
       type: "TEXT",
-      content: result.reply,
+      content: finalReply,
       metadata: result.metadata as any,
     },
   });
 
+  if (persistedCites.length > 0) {
+    const sectionsById = new Map(
+      context.applicableSections
+        .filter((s) => s.id)
+        .map((s) => [s.id!, s])
+    );
+    try {
+      await Promise.all(
+        persistedCites.map(({ id, sectionId }) => {
+          const sec = sectionsById.get(sectionId);
+          if (!sec) return Promise.resolve();
+          const excerpt = sec.description
+            ? `${sec.act} Section ${sec.sectionNumber} — ${sec.title}\n\n${sec.description.slice(0, 400)}`
+            : `${sec.act} Section ${sec.sectionNumber} — ${sec.title}`;
+          return prisma.citation.create({
+            data: {
+              id,
+              messageId: assistantMsg.id,
+              sourceType: "SECTION",
+              sectionId,
+              excerptText: excerpt,
+            },
+          });
+        })
+      );
+      log.info({ count: persistedCites.length, messageId: assistantMsg.id }, "Persisted citations for message");
+    } catch (err) {
+      log.warn({ err: (err as Error).message }, "Failed to persist some citations");
+    }
+  }
+
   return {
     role: "assistant",
     type: "text",
-    content: result.reply,
+    content: finalReply,
     metadata: result.metadata,
   };
 }
@@ -357,7 +475,7 @@ async function buildCaseContext(caseId: string): Promise<CaseContext> {
   const caseRecord = await prisma.case.findUniqueOrThrow({
     where: { id: caseId },
     include: {
-      documents: true,
+      documents: { where: { enabled: true } }, // respect Sources panel checkboxes
       messages: {
         where: { role: { in: ["USER", "ASSISTANT"] }, type: "TEXT" },
         orderBy: { createdAt: "desc" },
@@ -394,7 +512,7 @@ async function buildCaseContext(caseId: string): Promise<CaseContext> {
 async function loadCaseWithDocuments(caseId: string): Promise<CaseWithDocuments> {
   const c = await prisma.case.findUniqueOrThrow({
     where: { id: caseId },
-    include: { documents: true },
+    include: { documents: { where: { enabled: true } } },
   });
 
   return {
@@ -447,19 +565,21 @@ async function researchCase(caseData: CaseWithDocuments): Promise<LegalMemo> {
 }
 
 async function getApplicableSections(sectionsRaw: string[]) {
-  const results: { act: string; sectionNumber: string; title: string; bailable: boolean; punishment: string; ingredients: string[] }[] = [];
+  const results: { id: string; act: string; sectionNumber: string; title: string; bailable: boolean; punishment: string; ingredients: string[]; description: string }[] = [];
 
   for (const ref of sectionsRaw) {
     const num = ref.replace(/[^0-9a-zA-Z]/g, " ").split(/\s+/).pop() || "";
     const section = await prisma.statuteSection.findFirst({ where: { sectionNumber: num } });
     if (section) {
       results.push({
+        id: section.id,
         act: section.actType,
         sectionNumber: section.sectionNumber,
         title: section.title,
         bailable: section.bailable,
         punishment: section.punishment,
         ingredients: section.ingredients,
+        description: section.description,
       });
     }
   }

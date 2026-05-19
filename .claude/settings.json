@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(python -c \"import urllib.request; r = urllib.request.urlopen\\('https://docs.google.com/document/d/1sh-8PSJO_wIjNVF1Jn_8SUTqdny0O1potojH2fTgahg/export?format=txt'\\); open\\(r'C:\\\\Users\\\\HP\\\\Desktop\\\\Personal\\\\lexmind\\\\lexmind\\\\leximini\\\\_doc_sample.txt','wb'\\).write\\(r.read\\(\\)\\)\")",
+      "PowerShell(python -c \"import sys; sys.path.insert\\(0, r'C:\\\\Users\\\\HP\\\\Desktop\\\\Personal\\\\lexmind\\\\lexmind\\\\leximini\\\\scripts'\\); from download_doc_pdfs import fetch_doc_text, parse, sanitize, filename_for; from collections import Counter; text = fetch_doc_text\\('1sh-8PSJO_wIjNVF1Jn_8SUTqdny0O1potojH2fTgahg'\\); items = parse\\(text\\); c = Counter\\(sanitize\\(f\\) for f,_,_ in items\\); [print\\(f'  {n:3d}  {f}'\\) for f,n in c.most_common\\(\\)]; print\\(f'TOTAL: {len\\(items\\)} PDFs, {len\\(c\\)} folders'\\); print\\('Sample filenames:'\\); [print\\(f'  {sanitize\\(f\\)}/{filename_for\\(u,l,i+1\\)}'\\) for i,\\(f,l,u\\) in enumerate\\(items[:3] + items[-4:]\\)]\")",
+      "PowerShell(python \"C:\\\\Users\\\\HP\\\\Desktop\\\\Personal\\\\lexmind\\\\lexmind\\\\leximini\\\\scripts\\\\download_doc_pdfs.py\" 1sh-8PSJO_wIjNVF1Jn_8SUTqdny0O1potojH2fTgahg --out \"C:\\\\Users\\\\HP\\\\Desktop\\\\Personal\\\\lexmind\\\\lexmind\\\\leximini\\\\downloads\")"
+    ]
+  }
+}

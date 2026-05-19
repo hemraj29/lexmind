@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import CommandChips from "./CommandChips.vue";
 
 const props = defineProps<{
   disabled: boolean;
@@ -35,6 +36,11 @@ function handleFileSelect(e: Event) {
 function clearFile() {
   file.value = null;
   if (fileInputRef.value) fileInputRef.value.value = "";
+}
+
+function handleCommand(cmd: string) {
+  // Send the command immediately on chip click
+  emit("send", cmd);
 }
 </script>
 
@@ -99,6 +105,11 @@ function clearFile() {
           <div v-else class="w-3.5 h-3.5 border-2 border-white border-t-transparent rounded-full animate-spin" />
         </button>
       </div>
+    </div>
+
+    <!-- Command chips below input -->
+    <div class="mt-2">
+      <CommandChips @command="handleCommand" />
     </div>
 
     <p class="text-[11px] text-gray-400 text-center mt-2">

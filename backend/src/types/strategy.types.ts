@@ -53,12 +53,14 @@ export interface CaseContext {
   }[];
   sectionsRaw: string[];
   applicableSections: {
+    id?: string;
     act: string;
     sectionNumber: string;
     title: string;
     bailable: boolean;
     punishment: string;
     ingredients: string[];
+    description?: string;
   }[];
   precedents: {
     caseTitle: string;

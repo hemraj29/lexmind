@@ -70,15 +70,21 @@ CRITICAL RULES:
 
   async chat(
     message: string,
-    context: CaseContext
+    context: CaseContext,
+    citeMap?: Record<string, string>
   ): Promise<{ reply: string; metadata: { sources: { type: string; reference: string }[] } }> {
-    log.info({ caseId: context.caseId, messageLen: message.length }, "Strategy chat message");
+    log.info({ caseId: context.caseId, messageLen: message.length, cites: citeMap ? Object.keys(citeMap).length : 0 }, "Strategy chat message");
 
-    const caseContextStr = this.buildContextString(context);
+    const caseContextStr = this.buildContextString(context, citeMap);
     const historyMessages = context.chatHistory.slice(-20).map((m) => ({
       role: m.role as "user" | "assistant",
       content: m.content,
     }));
+
+    const citeIds = citeMap ? Object.keys(citeMap) : [];
+    const citationRule = citeIds.length > 0
+      ? `\n9. CITATIONS: For every legal proposition you state that is supported by one of the sections above, append the matching token (like [^${citeIds[0]}]) immediately after the sentence. ONLY use the tokens shown above (${citeIds.map((c) => `[^${c}]`).join(", ")}). Do not invent new cite tokens. Cite generously — at least one cite per statutory claim.`
+      : "";
 
     const systemPrompt = `You are a senior Indian criminal defense lawyer acting as an AI legal advisor. You have access to the following case information:
 
@@ -92,7 +98,7 @@ RULES:
 5. If asked to do something you cannot do (like file a petition), guide the lawyer on using @commands
 6. Be practical, actionable, and specific — you are advising a practicing lawyer
 7. If information is insufficient to answer, say what's missing
-8. At the end of your response, include a JSON block with sources: { "sources": [{ "type": "document|section|precedent", "reference": "..." }] }
+8. Do NOT append any JSON metadata, code blocks, or "sources" lists at the end. Respond with clean markdown prose only.${citationRule}
 
 Available @commands you can suggest:
 @bail — Generate Regular Bail Application
@@ -114,21 +120,7 @@ Available @commands you can suggest:
       { temperature: 0.3, maxTokens: 4096 }
     );
 
-    // Try to extract sources from the response
-    let reply = raw;
-    let sources: { type: string; reference: string }[] = [];
-
-    const jsonMatch = raw.match(/\{[\s\S]*"sources"[\s\S]*\}\s*$/);
-    if (jsonMatch) {
-      try {
-        const parsed = JSON.parse(jsonMatch[0]);
-        sources = parsed.sources || [];
-        reply = raw.slice(0, raw.indexOf(jsonMatch[0])).trim();
-      } catch {
-        // Couldn't parse sources, use full reply
-      }
-    }
-
+    const { reply, sources } = stripTrailingSourcesBlock(raw);
     return { reply, metadata: { sources } };
   }
 
@@ -205,7 +197,7 @@ Return JSON: { "missingInfo": ["Item 1", "Item 2", ...] }`;
     return result.missingInfo || [];
   }
 
-  private buildContextString(context: CaseContext): string {
+  private buildContextString(context: CaseContext, citeMap?: Record<string, string>): string {
     const parts: string[] = [];
 
     parts.push(`CASE: ${context.title}`);
@@ -226,13 +218,26 @@ Return JSON: { "missingInfo": ["Item 1", "Item 2", ...] }`;
       }
     }
 
+    // Build reverse lookup: sectionId -> citeId
+    const sectionIdToCite = new Map<string, string>();
+    if (citeMap) {
+      for (const [cite, sectionId] of Object.entries(citeMap)) {
+        sectionIdToCite.set(sectionId, cite);
+      }
+    }
+
     // Applicable sections
     if (context.applicableSections.length > 0) {
       parts.push("\n--- APPLICABLE SECTIONS ---");
       for (const s of context.applicableSections) {
-        parts.push(`${s.act} Section ${s.sectionNumber} — ${s.title} | Bailable: ${s.bailable} | Punishment: ${s.punishment}`);
+        const cite = s.id ? sectionIdToCite.get(s.id) : undefined;
+        const prefix = cite ? `[${cite}] ` : "";
+        parts.push(`${prefix}${s.act} Section ${s.sectionNumber} — ${s.title} | Bailable: ${s.bailable} | Punishment: ${s.punishment}`);
         if (s.ingredients.length > 0) {
           parts.push(`  Ingredients: ${s.ingredients.join("; ")}`);
+        }
+        if (s.description) {
+          parts.push(`  Description: ${s.description.slice(0, 400)}`);
         }
       }
     }
@@ -250,3 +255,46 @@ Return JSON: { "missingInfo": ["Item 1", "Item 2", ...] }`;
 }
 
 export const strategyAdvisorAgent = new StrategyAdvisorAgent();
+
+/**
+ * Safety-net stripper: removes any trailing JSON metadata block the LLM
+ * might still emit (with or without ```json fences). Returns clean prose
+ * plus any parsed sources for the metadata field.
+ */
+function stripTrailingSourcesBlock(raw: string): {
+  reply: string;
+  sources: { type: string; reference: string }[];
+} {
+  let reply = raw.trim();
+  let sources: { type: string; reference: string }[] = [];
+
+  // Try fenced code block first: ```json {...} ```
+  const fencedMatch = reply.match(/\n*```(?:json)?\s*(\{[\s\S]*?\})\s*```\s*$/i);
+  if (fencedMatch) {
+    try {
+      const parsed = JSON.parse(fencedMatch[1]!);
+      if (Array.isArray(parsed.sources)) sources = parsed.sources;
+    } catch {
+      // ignore parse failures
+    }
+    reply = reply.slice(0, fencedMatch.index).trim();
+    return { reply, sources };
+  }
+
+  // Bare JSON object at the end mentioning "sources"
+  const bareMatch = reply.match(/\n*(\{[\s\S]*"sources"[\s\S]*\})\s*$/);
+  if (bareMatch) {
+    try {
+      const parsed = JSON.parse(bareMatch[1]!);
+      if (Array.isArray(parsed.sources)) sources = parsed.sources;
+    } catch {
+      // ignore parse failures
+    }
+    reply = reply.slice(0, bareMatch.index).trim();
+    return { reply, sources };
+  }
+
+  // Also strip any trailing horizontal rule the AI sometimes leaves behind
+  reply = reply.replace(/\n+---+\s*$/, "").trim();
+  return { reply, sources };
+}

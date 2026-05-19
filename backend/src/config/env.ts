@@ -4,10 +4,17 @@ import { config } from "dotenv";
 config();
 
 const envSchema = z.object({
-  // OpenAI
-  OPENAI_API_KEY: z.string().min(1, "OPENAI_API_KEY is required"),
+  // OpenAI — legacy, optional now (Bedrock is the backbone)
+  OPENAI_API_KEY: z.string().default("not-used"),
   OPENAI_MODEL: z.string().default("gpt-4o"),
   OPENAI_EMBEDDING_MODEL: z.string().default("text-embedding-3-small"),
+
+  // AWS Bedrock — the new LLM backbone
+  AWS_ACCESS_KEY_ID: z.string().min(1, "AWS_ACCESS_KEY_ID is required"),
+  AWS_SECRET_ACCESS_KEY: z.string().min(1, "AWS_SECRET_ACCESS_KEY is required"),
+  AWS_REGION: z.string().default("us-east-1"),
+  BEDROCK_CHAT_MODEL: z.string().default("us.anthropic.claude-opus-4-5-20251101-v1:0"),
+  BEDROCK_EMBED_MODEL: z.string().default("amazon.titan-embed-text-v1"),
 
   // PostgreSQL (pgvector handles both data + vectors)
   DATABASE_URL: z.string().min(1, "DATABASE_URL is required"),

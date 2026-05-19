@@ -79,6 +79,14 @@ async function bootstrap(): Promise<void> {
 
   process.on("SIGINT", () => shutdown("SIGINT"));
   process.on("SIGTERM", () => shutdown("SIGTERM"));
+
+  // Prevent single uncaught errors from crashing the server
+  process.on("uncaughtException", (err) => {
+    log.error({ err: err.message, stack: err.stack }, "uncaughtException — keeping server alive");
+  });
+  process.on("unhandledRejection", (reason) => {
+    log.error({ reason: String(reason) }, "unhandledRejection — keeping server alive");
+  });
 }
 
 bootstrap().catch((err) => {
